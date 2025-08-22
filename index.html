@@ -3,56 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zhii Business</title>
+  <title>ZHII BUSINESS</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #6A0DAD; /* Ungu sesuai contoh */
+      color: #fff;
       text-align: center;
-      background: linear-gradient(135deg, #6a11cb, #2575fc); /* ungu ke biru */
-      color: white;
     }
-
     .logo {
       margin-top: 20px;
     }
-
     .logo img {
-      width: 100px;
+      width: 120px;
       height: auto;
-      border-radius: 50%;
     }
-
     h1 {
-      font-size: 28px;
-      margin: 10px 0;
-      font-weight: bold;
+      font-size: 36px;
+      margin: 10px 0 20px 0;
     }
-
-    .box {
-      background: rgba(255, 255, 255, 0.15);
-      padding: 15px;
-      margin: 15px auto;
-      width: 85%;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      backdrop-filter: blur(5px);
+    .card {
+      background: #fff;
+      color: #000;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 400px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
-
     .highlight {
+      font-size: 24px;
       font-weight: bold;
-      color: #ffeb3b;
+      color: red;
     }
-
-    .timer {
-      font-size: 22px;
-      font-weight: bold;
-      background: rgba(0,0,0,0.3);
-      display: inline-block;
-      padding: 8px 18px;
+    .timer-box {
+      background: #fff;
+      color: #000;
+      padding: 15px;
+      margin: 10px auto;
+      max-width: 250px;
       border-radius: 10px;
-      margin-top: 10px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    del {
+      color: red;
     }
   </style>
 </head>
@@ -60,38 +56,66 @@
 
   <!-- Logo -->
   <div class="logo">
-    <img src="logo.jpg" alt="Logo Zhii Business">
+    <img src="logo.jpg" alt="Logo ZHII Business">
   </div>
 
   <!-- Judul -->
   <h1>WELCOME TO ZHII BUSINESS</h1>
+
+  <!-- Jumlah Member -->
   <p>👥 sudah 94.330 member bergabung!</p>
 
-  <!-- Kotak 1 -->
-  <div class="box">
+  <!-- JOIN & PENJELASAN BISNIS -->
+  <div class="card">
     <h2>JOIN DAN RAIH KEUNTUNGAN</h2>
-    <h3>LOWONGAN PEKERJAAN</h3>
+    <p><strong>LOWONGAN PEKERJAAN</strong></p>
     <p>
-      Mau income 100RB - 2JT sehari kak?? Bisa banget 😍 <br>
-      BISNIS INI SANGAT COCOK UNTUK <br>
-      PELAJAR, MAHASISWA, IRT, PENGANGGURAN, KERJA SAMPINGAN <br>
-      untuk semua kalangan
+      Mau income 100RB-2JT sehari kak?? Bisa banget BISNIS INI SANGAT COCOK UNTUK PELAJAR, 
+      MAHASISWA, IRT, PENGANGGURAN, KERJA SAMPINGAN untuk semua kalangan ⚠️<br><br>
+      BIG PROMO HANYA UTK 10 ORANG PERTAMA ⚠️<br>
+      Penghasilan minimal 100rb-500rb /hari!!! kamu mau kan biar ATM gendut😊 YUK JOIN🥰<br><br>
+      ❌NO MLM ❌NO JUDI ❌NO MONEY GAMES, 100% halal
     </p>
   </div>
 
-  <!-- Kotak 2 -->
-  <div class="box">
-    <h2>⚠️ BIG PROMO HANYA UTK 10 ORANG PERTAMA ⚠️</h2>
-    <p>
-      Penghasilan minimal 100rb - 500rb /hari!!! <br>
-      Kamu mau kan biar ATM gendut 😊 <br>
-      <span class="highlight">YUK JOIN 🥰</span>
-    </p>
+  <!-- PROMO JOIN -->
+  <div class="card">
+    <h2>PROMO JOIN HARI INI🔥</h2>
+    <p class="highlight">Rp.60.000 <del>Rp.350.000</del></p>
+    <p>💥 diskon 85% untuk 10 orang pertama</p>
   </div>
 
-  <!-- Timer -->
-  <h3>PROMO SPECIAL BERAKHIR DALAM</h3>
-  <div class="timer">23:59:59</div>
+  <!-- Timer Promo -->
+  <p><strong>🔥 PROMO SPESIAL BERAKHIR DALAM:</strong></p>
+  <div class="timer-box" id="countdown">24:00:00</div>
+  <p>Jangan sampai kelewatan! harga akan kembali normal ke <del>Rp.350.000</del></p>
+
+  <script>
+    // Timer 24 jam
+    function startCountdown(duration) {
+      let timer = duration, hours, minutes, seconds;
+      setInterval(function () {
+        hours = parseInt(timer / 3600, 10);
+        minutes = parseInt((timer % 3600) / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        hours = hours < 10 ? "0" + hours : hours;
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        document.getElementById('countdown').textContent = hours + ":" + minutes + ":" + seconds;
+
+        if (--timer < 0) {
+          timer = 0;
+        }
+      }, 1000);
+    }
+
+    window.onload = function () {
+      let twentyFourHours = 24 * 60 * 60; // 24 jam dalam detik
+      startCountdown(twentyFourHours);
+    };
+  </script>
 
 </body>
 </html>
