@@ -3,129 +3,95 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZHII BUSINESS</title>
+  <title>Promo Bisnis</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
       text-align: center;
-      margin: 0;
-      padding: 0;
-    }
-    .container {
-      max-width: 700px;
-      margin: 20px auto;
       padding: 20px;
+      background-color: #6a0dad; /* ungu */
+      color: black;
+      margin: 0;
     }
-    h1 {
-      color: #4b0082;
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
-    .members {
-      font-size: 18px;
-      margin-bottom: 20px;
-      color: #333;
-    }
-    .box {
+
+    .card {
       background: white;
       padding: 20px;
       margin: 20px 0;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     }
-    .promo-join {
-      font-size: 22px;
-      font-weight: bold;
-      margin-bottom: 10px;
+
+    h2 {
+      margin-top: 0;
+      color: #d10000;
     }
+
     .price {
-      font-size: 26px;
+      font-size: 24px;
       color: red;
       font-weight: bold;
     }
+
     .old-price {
       text-decoration: line-through;
       color: gray;
-      font-size: 20px;
+      margin-left: 8px;
     }
-    .discount {
-      margin-top: 10px;
-      font-size: 16px;
-      color: #444;
-    }
-    .countdown-title {
-      font-size: 20px;
-      margin-top: 20px;
-      font-weight: bold;
-      color: #000;
-    }
-    .countdown-box {
-      background: #fff;
-      padding: 15px;
-      display: inline-block;
-      border-radius: 12px;
-      margin-top: 10px;
+
+    #timer {
       font-size: 28px;
       font-weight: bold;
-      color: #e60000;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      color: #ff4500;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>WELCOME TO ZHII BUSINESS</h1>
-    <p class="members">👥 sudah 94.330 member bergabung!</p>
 
-    <!-- Kotak 1 -->
-    <div class="box">
-      <h2>JOIN DAN RAIH KEUNTUNGAN</h2>
-      <p><strong>LOWONGAN PEKERJAAN</strong></p>
-      <p>
-        Mau income 100RB-2JT sehari kak?? Bisa banget BISNIS INI SANGAT COCOK 
-        UNTUK PELAJAR, MAHASISWA, IRT, PENGANGGURAN, KERJA SAMPINGAN untuk semua kalangan ⚠️<br><br>
-        BIG PROMO HANYA UTK 10 ORANG PERTAMA <br>
-        ⚠️Penghasilan minimal 100rb-500rb /hari!!! kamu mau kan biar ATM gendut😊 YUK JOIN🥰 <br><br>
-        ❌NO MLM ❌NO JUDI ❌NO MONEY GAMES, 100% halal
-      </p>
-    </div>
+  <div class="card">
+    <p>kak?? Bisa banget BISNIS INI SANGAT COCOK UNTUK PELAJAR, MAHASISWA, IRT, PENGANGGURAN, KERJA SAMPINGAN untuk semua kalangan ⚠️</p>
+    <p><b>BIG PROMO HANYA UTK 10 ORANG PERTAMA ⚠️</b></p>
+    <p>Penghasilan minimal 100rb-500rb /hari!!! kamu mau kan biar ATM gendut 😊 YUK JOIN 🥰</p>
+    <p>❌NO MLM ❌NO JUDI ❌NO MONEY GAMES, 100% halal</p>
+  </div>
 
-    <!-- Kotak 2 -->
-    <div class="box">
-      <p class="promo-join">PROMO JOIN HARI INI🔥</p>
-      <p class="price">Rp.60.000 <span class="old-price">Rp.350.000</span></p>
-      <p class="discount">💥 diskon 85% untuk 10 orang pertama</p>
-    </div>
+  <div class="card">
+    <h2>PROMO JOIN HARI INI🔥</h2>
+    <p class="price">Rp.60.000 <span class="old-price">Rp.350.000</span></p>
+    <p>💥 diskon 85% untuk 10 orang pertama</p>
+  </div>
 
-    <!-- Countdown -->
-    <p class="countdown-title">🔥PROMO SPESIAL BERAKHIR DALAM:</p>
-    <div class="countdown-box" id="countdown">24:00:00</div>
-    <p>Jangan sampai kelewatan! harga akan kembali normal ke <span class="old-price">Rp.350.000</span></p>
+  <div class="card">
+    <h2>🔥 PROMO SPESIAL BERAKHIR DALAM:</h2>
+    <div id="timer">23:59:59</div>
   </div>
 
   <script>
-    // Hitung mundur 24 jam
-    let countDownDate = new Date().getTime() + (24 * 60 * 60 * 1000);
+    // Countdown 24 jam
+    function startCountdown(duration) {
+      let timer = duration, hours, minutes, seconds;
+      setInterval(function () {
+        hours = parseInt(timer / 3600, 10);
+        minutes = parseInt((timer % 3600) / 60, 10);
+        seconds = parseInt(timer % 60, 10);
 
-    let x = setInterval(function() {
-      let now = new Date().getTime();
-      let distance = countDownDate - now;
+        hours = hours < 10 ? "0" + hours : hours;
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
 
-      let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        document.getElementById("timer").textContent = hours + ":" + minutes + ":" + seconds;
 
-      document.getElementById("countdown").innerHTML =
-        (hours < 10 ? "0" + hours : hours) + ":" +
-        (minutes < 10 ? "0" + minutes : minutes) + ":" +
-        (seconds < 10 ? "0" + seconds : seconds);
+        if (--timer < 0) {
+          timer = duration; // reset kalau mau looping
+        }
+      }, 1000);
+    }
 
-      if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("countdown").innerHTML = "EXPIRED";
-      }
-    }, 1000);
+    window.onload = function () {
+      let twentyFourHours = 24 * 60 * 60; // 24 jam
+      startCountdown(twentyFourHours);
+    };
   </script>
+
 </body>
 </html>
