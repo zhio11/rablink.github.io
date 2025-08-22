@@ -2,108 +2,127 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ZHII BUSINESS</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      text-align: center;
       background: linear-gradient(135deg, #6a11cb, #2575fc);
       color: white;
       margin: 0;
       padding: 0;
+      text-align: center;
+    }
+    .container {
+      max-width: 700px;
+      margin: auto;
+      padding: 20px;
     }
     img.logo {
       width: 120px;
-      height: auto;
-      margin-top: 30px;
-    }
-    h1 {
-      font-size: 48px;
       margin-top: 20px;
     }
-    h2 {
-      font-size: 32px;
+    .box {
+      background: white;
+      color: black;
+      padding: 20px;
+      border-radius: 15px;
       margin: 20px 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
-    p {
-      font-size: 20px;
-      margin: 15px 20px;
-      line-height: 1.5;
-    }
-    .strike {
-      text-decoration: line-through;
-      color: #ffaaaa;
-    }
-    .promo {
-      font-size: 26px;
-      font-weight: bold;
-      color: #ffeb3b;
-      margin: 20px 0;
+    .price-box {
+      background: #f8f8f8;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 20px;
     }
     .countdown {
-      font-size: 24px;
+      font-size: 20px;
       font-weight: bold;
-      color: #ff4444;
+      color: red;
       margin-top: 15px;
     }
   </style>
 </head>
 <body>
+  <div class="container">
 
-  <!-- Logo bisnis -->
-  <img src="logo.png" alt="Logo ZHII Business" class="logo">
+    <!-- Logo Bisnis -->
+    <img src="logo.png" alt="Logo Bisnis" class="logo">
 
-  <!-- Kata sambutan -->
-  <h1>WELCOME TO ZHII BUSINESS</h1>
-  <p>👥 sudah 94.330 member bergabung!</p>
+    <!-- Sambutan -->
+    <h1>WELCOME TO ZHII BUSINESS</h1>
+    <p>👥 sudah <b>94.330</b> member bergabung!</p>
 
-  <!-- Tulisan join -->
-  <h2>JOIN DAN RAIH KEUNTUNGAN</h2>
+    <!-- Join -->
+    <h2 style="color: yellow;">JOIN DAN RAIH KEUNTUNGAN</h2>
 
-  <!-- Penjelasan bisnis -->
-  <p>
-    <b>LOWONGAN PEKERJAAN</b><br><br>
-    Mau income 100RB-2JT sehari kak?? Bisa banget 😍<br>
-    BISNIS INI SANGAT COCOK UNTUK PELAJAR, MAHASISWA, IRT, PENGANGGURAN,  
-    KERJA SAMPINGAN untuk semua kalangan ⚠️<br><br>
-    <b>BIG PROMO HANYA UTK 10 ORANG PERTAMA</b><br>
-    ⚠️Penghasilan minimal 100rb-500rb /hari!!! <br>
-    Kamu mau kan biar ATM gendut😊 YUK JOIN🥰 <br><br>
-    ❌NO MLM ❌NO JUDI ❌NO MONEY GAMES <br>
-    ✅100% halal
-  </p>
+    <!-- Penjelasan bisnis -->
+    <div class="box">
+      <h2 style="color: purple;">LOWONGAN PEKERJAAN</h2>
+      <p>
+        Mau income <b>100RB - 2JT</b> sehari kak?? Bisa banget 😍 <br>
+        BISNIS INI SANGAT COCOK UNTUK PELAJAR, MAHASISWA, IRT, PENGANGGURAN, KERJA SAMPINGAN untuk semua kalangan ⚠️ <br>
+        <span style="color: red; font-weight: bold;">BIG PROMO HANYA UNTUK 10 ORANG PERTAMA 🚨</span>
+      </p>
+      <p>
+        ⚠️ Penghasilan minimal <b>100rb - 500rb</b> /hari!!! <br>
+        Kamu mau kan biar ATM gendut 😊 YUK JOIN 🥰
+      </p>
+      <p style="color: green;">
+        ❌ NO MLM ❌ NO JUDI ❌ NO MONEY GAMES <br>
+        ✅ 100% Halal
+      </p>
 
-  <!-- Promo -->
-  <div class="promo">PROMO JOIN HARI INI 🔥</div>
-  <h2>Rp.60.000 <span class="strike">Rp.350.000</span></h2>
-  <p>💥 Diskon 85% untuk 10 orang pertama</p>
+      <!-- Harga Join -->
+      <div class="price-box">
+        <h3 style="color: red;">🔥 PROMO JOIN HARI INI 🔥</h3>
+        <p style="font-size: 22px; font-weight: bold;">
+          Rp. <span style="color: green;">60.000</span>
+          <span style="text-decoration: line-through; color: gray;"> Rp. 350.000 </span>
+        </p>
+        <p style="color: orange; font-weight: bold;">💥 Diskon 85% untuk 10 orang pertama</p>
+      </div>
+    </div>
 
-  <!-- Countdown -->
-  <div class="promo">🔥 PROMO SPESIAL BERAKHIR DALAM:</div>
-  <div id="countdown" class="countdown"></div>
-  <p>Jangan sampai kelewatan! Harga akan kembali normal ke <span class="strike">Rp.350.000</span></p>
+    <!-- Countdown Promo -->
+    <h3 style="color: white;">🔥 PROMO SPESIAL BERAKHIR DALAM:</h3>
+    <div id="countdown" class="countdown"></div>
+    <p>
+      Jangan sampai kelewatan! harga akan kembali normal ke 
+      <span style="text-decoration: line-through; color: gray;">Rp. 350.000</span>
+    </p>
 
+  </div>
+
+  <!-- Script Countdown 24 Jam -->
   <script>
-    // Hitung mundur 24 jam
-    var countDownDate = new Date().getTime() + (24 * 60 * 60 * 1000);
+    function startCountdown(durationInHours) {
+      let countdownElement = document.getElementById("countdown");
+      let endTime = new Date().getTime() + durationInHours * 60 * 60 * 1000;
 
-    var x = setInterval(function() {
-      var now = new Date().getTime();
-      var distance = countDownDate - now;
+      function updateCountdown() {
+        let now = new Date().getTime();
+        let distance = endTime - now;
 
-      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        if (distance <= 0) {
+          countdownElement.innerHTML = "⏰ Promo sudah berakhir!";
+          clearInterval(interval);
+          return;
+        }
 
-      document.getElementById("countdown").innerHTML =
-        hours + "j " + minutes + "m " + seconds + "d ";
+        let hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+        let minutes = Math.floor((distance / (1000 * 60)) % 60);
+        let seconds = Math.floor((distance / 1000) % 60);
 
-      if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("countdown").innerHTML = "Promo Berakhir ❌";
+        countdownElement.innerHTML = hours + " Jam " + minutes + " Menit " + seconds + " Detik";
       }
-    }, 1000);
-  </script>
 
+      updateCountdown();
+      let interval = setInterval(updateCountdown, 1000);
+    }
+
+    startCountdown(24); // countdown 24 jam
+  </script>
 </body>
 </html>
