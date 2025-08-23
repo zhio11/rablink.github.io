@@ -3,127 +3,129 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Promo Bisnis</title>
+  <title>ZHII BUSINESS</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #6a0dad; /* ungu background */
-      color: #333;
+      background-color: #f5f5f5;
       text-align: center;
       margin: 0;
       padding: 0;
     }
     .container {
+      max-width: 700px;
+      margin: 20px auto;
       padding: 20px;
     }
-    .logo {
-      max-width: 120px;
+    h1 {
+      color: #4b0082;
+      font-size: 36px;
       margin-bottom: 10px;
     }
-    h1 {
-      color: white;
-      margin-bottom: 15px;
+    .members {
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: #333;
     }
     .box {
-      background-color: white;
+      background: white;
+      padding: 20px;
+      margin: 20px 0;
       border-radius: 12px;
-      padding: 15px;
-      margin: 15px auto;
-      max-width: 320px; /* diperkecil kotaknya */
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
-    .highlight {
-      color: red;
-      font-weight: bold;
-    }
-    .discount {
-      text-decoration: line-through;
-      color: gray;
-      font-size: 14px; /* agak diperkecil */
-    }
-    .price {
-      font-size: 20px;
-      font-weight: bold;
-      color: green;
-    }
-    .join {
-      font-weight: bold;
-      color: #FFD700; /* emas/kuning biar mencolok */
-    }
-    .timer-box {
-      background-color: white;
-      border-radius: 12px;
-      padding: 10px;
-      margin: 15px auto;
-      max-width: 220px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    .promo-join {
       font-size: 22px;
       font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .price {
+      font-size: 26px;
       color: red;
+      font-weight: bold;
+    }
+    .old-price {
+      text-decoration: line-through;
+      color: gray;
+      font-size: 20px;
+    }
+    .discount {
+      margin-top: 10px;
+      font-size: 16px;
+      color: #444;
+    }
+    .countdown-title {
+      font-size: 20px;
+      margin-top: 20px;
+      font-weight: bold;
+      color: #000;
+    }
+    .countdown-box {
+      background: #fff;
+      padding: 15px;
+      display: inline-block;
+      border-radius: 12px;
+      margin-top: 10px;
+      font-size: 28px;
+      font-weight: bold;
+      color: #e60000;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- Logo -->
-    <img src="logo.jpg" alt="Logo Bisnis" class="logo">
+    <h1>WELCOME TO ZHII BUSINESS</h1>
+    <p class="members">👥 sudah 94.330 member bergabung!</p>
 
-    <!-- Judul -->
-    <h1>👥 sudah 94.330 member bergabung!</h1>
-
-    <!-- Box Penjelasan Bisnis -->
+    <!-- Kotak 1 -->
     <div class="box">
       <h2>JOIN DAN RAIH KEUNTUNGAN</h2>
-      <p><b>LOWONGAN PEKERJAAN</b></p>
+      <p><strong>LOWONGAN PEKERJAAN</strong></p>
       <p>
-        Mau income 100RB-2JT sehari kak?? Bisa banget BISNIS INI SANGAT COCOK UNTUK PELAJAR, MAHASISWA, IRT, PENGANGGURAN, KERJA SAMPINGAN untuk semua kalangan ⚠️
-        <br><br>
-        <span class="highlight">BIG PROMO HANYA UTK 10 ORANG PERTAMA</span>
-        <br><br>
-        ⚠️Penghasilan minimal 100rb-500rb /hari!!! kamu mau kan biar ATM gendut😊 
-        <span class="join">YUK JOIN🥰</span>
-        <br><br>
+        Mau income 100RB-2JT sehari kak?? Bisa banget BISNIS INI SANGAT COCOK 
+        UNTUK PELAJAR, MAHASISWA, IRT, PENGANGGURAN, KERJA SAMPINGAN untuk semua kalangan ⚠️<br><br>
+        BIG PROMO HANYA UTK 10 ORANG PERTAMA <br>
+        ⚠️Penghasilan minimal 100rb-500rb /hari!!! kamu mau kan biar ATM gendut😊 YUK JOIN🥰 <br><br>
         ❌NO MLM ❌NO JUDI ❌NO MONEY GAMES, 100% halal
       </p>
     </div>
 
-    <!-- Box Harga -->
+    <!-- Kotak 2 -->
     <div class="box">
-      <p class="discount">Rp 350.000</p>
-      <p class="price">Rp 60.000</p>
+      <p class="promo-join">PROMO JOIN HARI INI🔥</p>
+      <p class="price">Rp.60.000 <span class="old-price">Rp.350.000</span></p>
+      <p class="discount">💥 diskon 85% untuk 10 orang pertama</p>
     </div>
 
-    <!-- Timer -->
-    <p style="color:white; font-weight:bold;">PROMO SPECIAL BERAKHIR DALAM</p>
-    <div class="timer-box" id="timer">23:59:59</div>
+    <!-- Countdown -->
+    <p class="countdown-title">🔥PROMO SPESIAL BERAKHIR DALAM:</p>
+    <div class="countdown-box" id="countdown">24:00:00</div>
+    <p>Jangan sampai kelewatan! harga akan kembali normal ke <span class="old-price">Rp.350.000</span></p>
   </div>
 
   <script>
-    // Timer countdown 24 jam
-    function startTimer(duration, display) {
-      let timer = duration, hours, minutes, seconds;
-      setInterval(function () {
-        hours = parseInt(timer / 3600, 10);
-        minutes = parseInt((timer % 3600) / 60, 10);
-        seconds = parseInt(timer % 60, 10);
+    // Hitung mundur 24 jam
+    let countDownDate = new Date().getTime() + (24 * 60 * 60 * 1000);
 
-        hours = hours < 10 ? "0" + hours : hours;
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
+    let x = setInterval(function() {
+      let now = new Date().getTime();
+      let distance = countDownDate - now;
 
-        display.textContent = hours + ":" + minutes + ":" + seconds;
+      let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        if (--timer < 0) {
-          timer = duration;
-        }
-      }, 1000);
-    }
+      document.getElementById("countdown").innerHTML =
+        (hours < 10 ? "0" + hours : hours) + ":" +
+        (minutes < 10 ? "0" + minutes : minutes) + ":" +
+        (seconds < 10 ? "0" + seconds : seconds);
 
-    window.onload = function () {
-      let twentyFourHours = 24 * 60 * 60, // 24 jam
-          display = document.querySelector('#timer');
-      startTimer(twentyFourHours, display);
-    };
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "EXPIRED";
+      }
+    }, 1000);
   </script>
 </body>
 </html>
