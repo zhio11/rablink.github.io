@@ -3,100 +3,104 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZHII BUSINESS</title>
+  <title>Promo Bisnis</title>
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #6A0DAD; /* Ungu sesuai contoh */
-      color: #fff;
+      background-color: #6a0dad; /* ungu background */
+      color: #333;
       text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      padding: 20px;
     }
     .logo {
-      margin-top: 20px;
-    }
-    .logo img {
-      width: 120px;
-      height: auto;
+      max-width: 120px;
+      margin-bottom: 10px;
     }
     h1 {
-      font-size: 36px;
-      margin: 10px 0 20px 0;
+      color: white;
+      margin-bottom: 15px;
     }
-    .card {
-      background: #fff;
-      color: #000;
+    .box {
+      background-color: white;
+      border-radius: 12px;
       padding: 15px;
-      margin: 20px auto;
-      max-width: 320px; /* diperkecil kotak */
-      border-radius: 15px;
+      margin: 15px auto;
+      max-width: 320px; /* diperkecil kotaknya */
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
     .highlight {
-      font-size: 26px;
-      font-weight: bold;
       color: red;
+      font-weight: bold;
     }
     .discount {
-      font-size: 18px; /* lebih kecil dari Rp.60.000 */
-      color: red;
+      text-decoration: line-through;
+      color: gray;
+      font-size: 14px; /* agak diperkecil */
+    }
+    .price {
+      font-size: 20px;
+      font-weight: bold;
+      color: green;
+    }
+    .join {
+      font-weight: bold;
+      color: #FFD700; /* emas/kuning biar mencolok */
     }
     .timer-box {
-      background: #fff;
-      color: #000;
-      padding: 12px;
-      margin: 10px auto;
-      max-width: 180px; /* diperkecil kotak timer */
-      border-radius: 10px;
+      background-color: white;
+      border-radius: 12px;
+      padding: 10px;
+      margin: 15px auto;
+      max-width: 220px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
       font-size: 22px;
       font-weight: bold;
-    }
-    del {
       color: red;
     }
   </style>
 </head>
 <body>
+  <div class="container">
+    <!-- Logo -->
+    <img src="logo.jpg" alt="Logo Bisnis" class="logo">
 
-  <!-- Logo -->
-  <div class="logo">
-    <img src="logo.jpg" alt="Logo ZHII Business">
+    <!-- Judul -->
+    <h1>👥 sudah 94.330 member bergabung!</h1>
+
+    <!-- Box Penjelasan Bisnis -->
+    <div class="box">
+      <h2>JOIN DAN RAIH KEUNTUNGAN</h2>
+      <p><b>LOWONGAN PEKERJAAN</b></p>
+      <p>
+        Mau income 100RB-2JT sehari kak?? Bisa banget BISNIS INI SANGAT COCOK UNTUK PELAJAR, MAHASISWA, IRT, PENGANGGURAN, KERJA SAMPINGAN untuk semua kalangan ⚠️
+        <br><br>
+        <span class="highlight">BIG PROMO HANYA UTK 10 ORANG PERTAMA</span>
+        <br><br>
+        ⚠️Penghasilan minimal 100rb-500rb /hari!!! kamu mau kan biar ATM gendut😊 
+        <span class="join">YUK JOIN🥰</span>
+        <br><br>
+        ❌NO MLM ❌NO JUDI ❌NO MONEY GAMES, 100% halal
+      </p>
+    </div>
+
+    <!-- Box Harga -->
+    <div class="box">
+      <p class="discount">Rp 350.000</p>
+      <p class="price">Rp 60.000</p>
+    </div>
+
+    <!-- Timer -->
+    <p style="color:white; font-weight:bold;">PROMO SPECIAL BERAKHIR DALAM</p>
+    <div class="timer-box" id="timer">23:59:59</div>
   </div>
-
-  <!-- Judul -->
-  <h1>WELCOME TO ZHII BUSINESS</h1>
-
-  <!-- Jumlah Member -->
-  <p>👥 sudah 94.330 member bergabung!</p>
-
-  <!-- JOIN & PENJELASAN BISNIS -->
-  <div class="card">
-    <h2>JOIN DAN RAIH KEUNTUNGAN</h2>
-    <p><strong>LOWONGAN PEKERJAAN</strong></p>
-    <p>
-      Mau income 100RB-2JT sehari kak?? Bisa banget BISNIS INI SANGAT COCOK UNTUK PELAJAR, 
-      MAHASISWA, IRT, PENGANGGURAN, KERJA SAMPINGAN untuk semua kalangan ⚠️<br><br>
-      <strong>BIG PROMO HANYA UTK 10 ORANG PERTAMA ⚠️</strong><br>
-      Penghasilan minimal 100rb-500rb /hari!!! kamu mau kan biar ATM gendut😊 YUK JOIN🥰<br><br>
-      ❌NO MLM ❌NO JUDI ❌NO MONEY GAMES, 100% halal
-    </p>
-  </div>
-
-  <!-- PROMO JOIN -->
-  <div class="card">
-    <h2>PROMO JOIN HARI INI🔥</h2>
-    <p class="highlight">Rp.60.000 <del class="discount">Rp.350.000</del></p>
-    <p>💥 diskon 85% untuk 10 orang pertama</p>
-  </div>
-
-  <!-- Timer Promo -->
-  <p><strong>🔥 PROMO SPESIAL BERAKHIR DALAM:</strong></p>
-  <div class="timer-box" id="countdown">24:00:00</div>
-  <p>Jangan sampai kelewatan! harga akan kembali normal ke <del>Rp.350.000</del></p>
 
   <script>
-    // Timer 24 jam
-    function startCountdown(duration) {
+    // Timer countdown 24 jam
+    function startTimer(duration, display) {
       let timer = duration, hours, minutes, seconds;
       setInterval(function () {
         hours = parseInt(timer / 3600, 10);
@@ -107,19 +111,19 @@
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
 
-        document.getElementById('countdown').textContent = hours + ":" + minutes + ":" + seconds;
+        display.textContent = hours + ":" + minutes + ":" + seconds;
 
         if (--timer < 0) {
-          timer = 0;
+          timer = duration;
         }
       }, 1000);
     }
 
     window.onload = function () {
-      let twentyFourHours = 24 * 60 * 60; // 24 jam dalam detik
-      startCountdown(twentyFourHours);
+      let twentyFourHours = 24 * 60 * 60, // 24 jam
+          display = document.querySelector('#timer');
+      startTimer(twentyFourHours, display);
     };
   </script>
-
 </body>
 </html>
