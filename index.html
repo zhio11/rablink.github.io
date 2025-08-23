@@ -11,6 +11,7 @@
       text-align: center;
       margin: 0;
       padding: 0;
+      color: #333;
     }
     .container {
       max-width: 700px;
@@ -25,14 +26,15 @@
     .members {
       font-size: 18px;
       margin-bottom: 20px;
-      color: #fff;
+      color: #f1f1f1;
     }
     .box {
       background: white;
-      padding: 20px;
+      padding: 15px;
       margin: 20px 0;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      font-size: 15px; /* perkecil font isi kotak */
     }
     .promo-join {
       font-size: 22px;
@@ -58,7 +60,7 @@
       font-size: 20px;
       margin-top: 20px;
       font-weight: bold;
-      color: #fff;
+      color: #000;
     }
     .countdown-box {
       background: #fff;
@@ -71,6 +73,11 @@
       color: #e60000;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
+    .red-old-price {
+      text-decoration: line-through;
+      color: red; /* warna merah khusus yang di bawah countdown */
+      font-size: 20px;
+    }
   </style>
 </head>
 <body>
@@ -78,9 +85,11 @@
     <h1>WELCOME TO ZHII BUSINESS</h1>
     <p class="members">👥 sudah 94.330 member bergabung!</p>
 
+    <!-- Judul di luar kotak -->
+    <h2 style="color:white;">JOIN DAN RAIH KEUNTUNGAN</h2>
+
     <!-- Kotak 1 -->
     <div class="box">
-      <h2>JOIN DAN RAIH KEUNTUNGAN</h2>
       <p><strong>LOWONGAN PEKERJAAN</strong></p>
       <p>
         Mau income 100RB-2JT sehari kak?? Bisa banget BISNIS INI SANGAT COCOK 
@@ -101,7 +110,7 @@
     <!-- Countdown -->
     <p class="countdown-title">🔥PROMO SPESIAL BERAKHIR DALAM:</p>
     <div class="countdown-box" id="countdown">24:00:00</div>
-    <p style="color:#fff;">Jangan sampai kelewatan! harga akan kembali normal ke <span class="old-price">Rp.350.000</span></p>
+    <p>Jangan sampai kelewatan! harga akan kembali normal ke <span class="red-old-price">Rp.350.000</span></p>
   </div>
 
   <script>
