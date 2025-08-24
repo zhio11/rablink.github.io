@@ -20,63 +20,76 @@
     }
     h1 {
       color: #fff;
-      font-size: 36px;
+      font-size: 26px; /* perkecil */
       margin-bottom: 10px;
     }
     .members {
-      font-size: 18px;
+      font-size: 14px; /* perkecil */
       margin-bottom: 20px;
       color: #f1f1f1;
     }
+    h2 {
+      font-size: 18px; /* perkecil */
+    }
     .box {
       background: white;
-      padding: 15px;
-      margin: 20px 0;
+      padding: 12px;
+      margin: 15px 0;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      font-size: 15px; /* perkecil font isi kotak */
+      font-size: 13px; /* perkecil isi kotak */
     }
     .promo-join {
-      font-size: 22px;
+      font-size: 16px; /* perkecil */
       font-weight: bold;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
     .price {
-      font-size: 26px;
+      font-size: 18px; /* perkecil */
       color: red;
       font-weight: bold;
     }
     .old-price {
       text-decoration: line-through;
       color: gray;
-      font-size: 20px;
+      font-size: 14px; /* perkecil */
     }
     .discount {
-      margin-top: 10px;
-      font-size: 16px;
+      margin-top: 6px;
+      font-size: 13px; /* perkecil */
       color: #444;
     }
     .countdown-title {
-      font-size: 20px;
-      margin-top: 20px;
+      font-size: 15px; /* perkecil */
+      margin-top: 15px;
       font-weight: bold;
       color: #000;
     }
     .countdown-box {
       background: #fff;
-      padding: 15px;
+      padding: 10px;
       display: inline-block;
       border-radius: 12px;
-      margin-top: 10px;
-      font-size: 28px;
+      margin-top: 8px;
+      font-size: 20px; /* perkecil */
       font-weight: bold;
       color: #e60000;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
     .red-old-price {
       text-decoration: line-through;
-      color: red; /* warna merah khusus yang di bawah countdown */
-      font-size: 20px;
+      color: red;
+      font-size: 14px; /* perkecil */
+    }
+    /* Bagian Motivasi */
+    section {
+      font-size: 13px; /* perkecil semua isi motivasi */
+    }
+    section h2 {
+      font-size: 16px; /* judul motivasi diperkecil */
+    }
+    section p {
+      font-size: 12px; /* perkecil isi kalimat motivasi */
     }
   </style>
 </head>
@@ -85,7 +98,6 @@
     <h1>WELCOME TO ZHII BUSINESS</h1>
     <p class="members">👥 sudah 94.330 member bergabung!</p>
 
-    <!-- Judul di luar kotak -->
     <h2 style="color:white;">JOIN DAN RAIH KEUNTUNGAN</h2>
 
     <!-- Kotak 1 -->
@@ -113,6 +125,18 @@
     <p>Jangan sampai kelewatan! harga akan kembali normal ke <span class="red-old-price">Rp.350.000</span></p>
   </div>
 
+  <!-- Bagian Motivasi -->
+  <section class="w-full bg-white py-6 px-4 rounded-2xl shadow-lg mt-6">
+    <h2 class="text-center text-black mb-3">
+      KATA MOTIVASI
+    </h2>
+    <div class="space-y-2 text-center">
+      <p>"Orang yang sukses sangat menyukai prosesnya, bukan hasil instan."</p>
+      <p>"Kegigihan berakar dalam mimpi, maka kita juga tidak pernah menyerah."</p>
+      <p>"Kesuksesan adalah sebuah perjalanan, bukan tujuan akhir."</p>
+    </div>
+  </section>
+
   <script>
     // Hitung mundur 24 jam
     let countDownDate = new Date().getTime() + (24 * 60 * 60 * 1000);
@@ -138,20 +162,3 @@
   </script>
 </body>
 </html>
-<!-- Bagian KATA MOTIVASI -->
-<section class="w-full bg-white py-6 px-4 rounded-2xl shadow-lg mt-6">
-  <h2 class="text-center text-2xl font-extrabold text-black mb-4">
-    KATA MOTIVASI
-  </h2>
-  <div class="space-y-3 text-center">
-    <p class="text-sm text-black font-light">
-      "Orang yang sukses sangat menyukai prosesnya, bukan hasil instan."
-    </p>
-    <p class="text-sm text-black font-light">
-      "Kegigihan berakar dalam mimpi, maka kita juga tidak pernah menyerah."
-    </p>
-    <p class="text-sm text-black font-light">
-      "Kesuksesan adalah sebuah perjalanan, bukan tujuan akhir."
-    </p>
-  </div>
-</section>
