@@ -1,164 +1,118 @@
-<!DOCTYPE html>
-<html lang="id">
+<!DOCTYPE html><html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZHII BUSINESS</title>
+  <title>Promo Spesial</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      background-color: #5a189a;
+      color: white;
       text-align: center;
-      margin: 0;
-      padding: 0;
-      color: #333;
-    }
-    .container {
-      max-width: 700px;
-      margin: 20px auto;
       padding: 20px;
     }
-    h1 {
-      color: #fff;
-      font-size: 26px; /* perkecil */
+    .logo {
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .title {
+      font-size: 22px;
+      font-weight: bold;
       margin-bottom: 10px;
     }
-    .members {
-      font-size: 14px; /* perkecil */
-      margin-bottom: 20px;
-      color: #f1f1f1;
-    }
-    h2 {
-      font-size: 18px; /* perkecil */
+    .timer {
+      font-size: 22px;
+      font-weight: bold;
+      margin: 15px auto;
+      background: white;
+      color: #5a189a;
+      padding: 10px 20px;
+      border-radius: 10px;
+      display: inline-block;
     }
     .box {
       background: white;
-      padding: 12px;
-      margin: 15px 0;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      font-size: 13px; /* perkecil isi kotak */
+      color: #5a189a;
+      padding: 4px 8px; /* diperkecil sekecil-kecilnya */
+      margin: 6px auto;
+      border-radius: 8px;
+      display: inline-block;
+      font-size: 12px;
+      max-width: 80%;
     }
-    .promo-join {
-      font-size: 16px; /* perkecil */
+    .highlight {
       font-weight: bold;
+      color: yellow;
+      text-shadow: 1px 1px 2px black;
+    }
+    .price-old {
+      text-decoration: line-through;
+      font-size: 12px;
+      color: gray;
+    }
+    .price-new {
+      font-size: 16px;
+      font-weight: bold;
+      color: red;
+    }
+    .warning {
+      font-size: 11px;
+      font-weight: bold;
+      color: white; /* diganti putih */
+      text-shadow: 1px 1px 2px black;
+    }
+    .motivation-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 15px;
       margin-bottom: 8px;
     }
-    .price {
-      font-size: 18px; /* perkecil */
-      color: red;
-      font-weight: bold;
-    }
-    .old-price {
-      text-decoration: line-through;
-      color: gray;
-      font-size: 14px; /* perkecil */
-    }
-    .discount {
-      margin-top: 6px;
-      font-size: 13px; /* perkecil */
-      color: #444;
-    }
-    .countdown-title {
-      font-size: 15px; /* perkecil */
-      margin-top: 15px;
-      font-weight: bold;
-      color: #000;
-    }
-    .countdown-box {
-      background: #fff;
-      padding: 10px;
-      display: inline-block;
-      border-radius: 12px;
-      margin-top: 8px;
-      font-size: 20px; /* perkecil */
-      font-weight: bold;
-      color: #e60000;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-    .red-old-price {
-      text-decoration: line-through;
-      color: red;
-      font-size: 14px; /* perkecil */
-    }
-    /* Bagian Motivasi */
-    section {
-      font-size: 13px; /* perkecil semua isi motivasi */
-    }
-    section h2 {
-      font-size: 16px; /* judul motivasi diperkecil */
-    }
-    section p {
-      font-size: 12px; /* perkecil isi kalimat motivasi */
+    .motivation {
+      font-size: 12px;
+      font-weight: normal;
+      color: white; /* diganti putih */
+      text-shadow: 1px 1px 2px black;
+      margin: 5px 0;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>WELCOME TO ZHII BUSINESS</h1>
-    <p class="members">👥 sudah 94.330 member bergabung!</p>
+  <div class="logo">JPG</div>
+  <div class="title">BIG PROMO HANYA UNTUK 10 ORANG PERTAMA</div>
+  <div class="timer" id="timer">24:59:59</div>  <div class="box">
+    PROMO JOIN HARI INI HANYA <span class="price-new">Rp60.000</span> <span class="price-old">Rp350.000</span>
+  </div>  <div class="box">
+    <span class="highlight">YUK JOIN</span>
+  </div>  <div class="warning">
+    Jangan sampai kelewatan! Harga akan kembali normal ke <span style="color:red; text-decoration:line-through;">Rp350.000</span>
+  </div>  <div class="motivation-title">KATA MOTIVASI</div>
+  <div class="motivation">“Orang yang sukses sangat menyukai prosesnya, bukan hasil instan.”</div>
+  <div class="motivation">“Kegigihan berakar dalam mimpi, maka kita juga tidak pernah menyerah.”</div>
+  <div class="motivation">“Kesuksesan adalah sebuah perjalanan, bukan tujuan akhir.”</div>  <script>
+    function startTimer(duration, display) {
+      let timer = duration, hours, minutes, seconds;
+      setInterval(function () {
+        hours = parseInt(timer / 3600, 10);
+        minutes = parseInt((timer % 3600) / 60, 10);
+        seconds = parseInt(timer % 60, 10);
 
-    <h2 style="color:white;">JOIN DAN RAIH KEUNTUNGAN</h2>
+        hours = hours < 10 ? "0" + hours : hours;
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
 
-    <!-- Kotak 1 -->
-    <div class="box">
-      <p><strong>LOWONGAN PEKERJAAN</strong></p>
-      <p>
-        Mau income 100RB-2JT sehari kak?? Bisa banget BISNIS INI SANGAT COCOK 
-        UNTUK PELAJAR, MAHASISWA, IRT, PENGANGGURAN, KERJA SAMPINGAN untuk semua kalangan ⚠️<br><br>
-        <strong>BIG PROMO HANYA UTK 10 ORANG PERTAMA ⚠️</strong><br>
-        Penghasilan minimal 100rb-500rb /hari!!! kamu mau kan biar ATM gendut😊 YUK JOIN🥰 <br><br>
-        ❌NO MLM ❌NO JUDI ❌NO MONEY GAMES, 100% halal
-      </p>
-    </div>
+        display.textContent = hours + ":" + minutes + ":" + seconds;
 
-    <!-- Kotak 2 -->
-    <div class="box">
-      <p class="promo-join">PROMO JOIN HARI INI🔥</p>
-      <p class="price">Rp.60.000 <span class="old-price">Rp.350.000</span></p>
-      <p class="discount">💥 diskon 85% untuk 10 orang pertama</p>
-    </div>
+        if (--timer < 0) {
+          timer = duration;
+        }
+      }, 1000);
+    }
 
-    <!-- Countdown -->
-    <p class="countdown-title">🔥PROMO SPESIAL BERAKHIR DALAM:</p>
-    <div class="countdown-box" id="countdown">24:00:00</div>
-    <p>Jangan sampai kelewatan! harga akan kembali normal ke <span class="red-old-price">Rp.350.000</span></p>
-  </div>
-
-  <!-- Bagian Motivasi -->
-  <section class="w-full bg-white py-6 px-4 rounded-2xl shadow-lg mt-6">
-    <h2 class="text-center text-black mb-3">
-      KATA MOTIVASI
-    </h2>
-    <div class="space-y-2 text-center">
-      <p>"Orang yang sukses sangat menyukai prosesnya, bukan hasil instan."</p>
-      <p>"Kegigihan berakar dalam mimpi, maka kita juga tidak pernah menyerah."</p>
-      <p>"Kesuksesan adalah sebuah perjalanan, bukan tujuan akhir."</p>
-    </div>
-  </section>
-
-  <script>
-    // Hitung mundur 24 jam
-    let countDownDate = new Date().getTime() + (24 * 60 * 60 * 1000);
-
-    let x = setInterval(function() {
-      let now = new Date().getTime();
-      let distance = countDownDate - now;
-
-      let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      let seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      document.getElementById("countdown").innerHTML =
-        (hours < 10 ? "0" + hours : hours) + ":" +
-        (minutes < 10 ? "0" + minutes : minutes) + ":" +
-        (seconds < 10 ? "0" + seconds : seconds);
-
-      if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("countdown").innerHTML = "EXPIRED";
-      }
-    }, 1000);
-  </script>
-</body>
+    window.onload = function () {
+      let twentyFourHours = 24 * 60 * 60,
+          display = document.querySelector('#timer');
+      startTimer(twentyFourHours, display);
+    };
+  </script></body>
 </html>
