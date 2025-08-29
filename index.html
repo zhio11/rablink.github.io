@@ -14,53 +14,57 @@
       color: #333;
     }
     .container {
-      max-width: 700px;
+      max-width: 600px;
       margin: 15px auto;
       padding: 10px;
     }
     h1 {
       color: #fff;
-      font-size: 22px; 
+      font-size: 22px;
       margin-bottom: 8px;
     }
     .members {
-      font-size: 12px; 
+      font-size: 13px;
       margin-bottom: 15px;
       color: #f1f1f1;
     }
     h2 {
-      font-size: 15px; 
+      font-size: 16px;
     }
     .box {
       background: white;
-      padding: 5px; /* kecil banget */
-      margin: 6px 0; /* kecil banget */
-      border-radius: 6px; /* kecil banget */
+      padding: 4px; /* super kecil */
+      margin: 6px auto; /* kecil */
+      border-radius: 6px; /* kecil */
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      font-size: 11px; 
+      font-size: 11px; /* isi kotak kecil */
+      max-width: 320px; /* biar ga penuh layar */
+    }
+    .box p {
+      margin: 4px 0;
     }
     .promo-join {
-      font-size: 13px; 
+      font-size: 13px;
       font-weight: bold;
       margin-bottom: 4px;
     }
     .price {
-      font-size: 14px; 
+      font-size: 14px;
       color: red;
       font-weight: bold;
     }
     .old-price {
       text-decoration: line-through;
       color: gray;
-      font-size: 11px; 
+      font-size: 12px;
     }
     .discount {
-      margin-top: 3px;
-      font-size: 11px; 
+      margin-top: 4px;
+      font-size: 11px;
       color: #444;
     }
     .countdown-title {
-      font-size: 13px; 
+      font-size: 13px;
       margin-top: 10px;
       font-weight: bold;
       color: #000;
@@ -69,9 +73,9 @@
       background: #fff;
       padding: 6px;
       display: inline-block;
-      border-radius: 8px;
-      margin-top: 5px;
-      font-size: 16px; 
+      border-radius: 6px;
+      margin-top: 4px;
+      font-size: 16px;
       font-weight: bold;
       color: #e60000;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -79,38 +83,44 @@
     .red-old-price {
       text-decoration: line-through;
       color: red;
-      font-size: 12px; 
+      font-size: 12px;
     }
     /* Bagian Motivasi */
     section {
-      font-size: 12px; 
-      color: white; 
+      font-size: 12px;
+      color: white;
     }
     section h2 {
-      font-size: 14px; 
-      color: white; 
+      font-size: 14px;
+      color: white;
     }
     section p {
-      font-size: 11px; 
-      color: white; 
-      margin: 4px 0;
-      line-height: 1.4;
+      font-size: 11px;
+      color: white;
+      margin-bottom: 6px; /* kasih jarak antar kalimat */
+    }
+    /* khusus teks penghasilan */
+    .income-text {
+      font-size: 13px; /* agak dibesarin dikit */
+    }
+    .highlight-text {
+      color: white; /* buat "jangan sampai kelewatan..." jadi putih */
     }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>WELCOME TO ZHII BUSINESS</h1>
-    <p class="members">👥 sudah 94.330 ribu member bergabung!</p>
+    <p class="members">👥 sudah 94.330 member bergabung!</p>
 
     <h2 style="color:white;">JOIN DAN RAIH KEUNTUNGAN</h2>
 
     <!-- Kotak 1 -->
     <div class="box">
       <p><strong>LOWONGAN PEKERJAAN</strong></p>
-      <p>
+      <p class="income-text">
         Mau income 100RB-2JT sehari kak?? Bisa banget BISNIS INI SANGAT COCOK 
-        UNTUK PELAJAR, MAHASISWA, IRT, PENGANGGURAN, KERJA SAMPINGAN cocok untuk semua kalangan ⚠️<br><br>
+        UNTUK PELAJAR, MAHASISWA, IRT, PENGANGGURAN, KERJA SAMPINGAN untuk semua kalangan ⚠️<br><br>
         <strong>BIG PROMO HANYA UTK 10 ORANG PERTAMA ⚠️</strong><br>
         Penghasilan minimal 100rb-500rb /hari!!! kamu mau kan biar ATM gendut😊 YUK JOIN🥰 <br><br>
         ❌NO MLM ❌NO JUDI ❌NO MONEY GAMES, 100% halal
@@ -127,31 +137,21 @@
     <!-- Countdown -->
     <p class="countdown-title">🔥PROMO SPESIAL BERAKHIR DALAM:</p>
     <div class="countdown-box" id="countdown">24:00:00</div>
-    <p style="color:white;">Jangan sampai kelewatan! harga akan kembali normal ke 
-      <span class="red-old-price">Rp.350.000</span></p>
+    <p class="highlight-text">Jangan sampai kelewatan! harga akan kembali normal ke <span class="red-old-price">Rp.350.000</span></p>
   </div>
 
- <!-- Bagian KATA MOTIVASI -->
-<section class="w-full bg-white py-6 px-4 rounded-2xl shadow-lg mt-6">
-  <h2 class="text-center text-2xl font-extrabold text-black mb-4">
-    KATA MOTIVASI
-  </h2>
-  <div class="space-y-3 text-center">
-    <p class="text-sm text-black font-light">
-      "Orang yang sukses sangat menyukai prosesnya, bukan hasil instan."
-    </p>
-    <p class="text-sm text-black font-light">
-      "Kegigihan berakar dalam mimpi, maka kita juga tidak pernah menyerah."
-    </p>
-    <p class="text-sm text-black font-light">
-      "Kesuksesan adalah sebuah perjalanan, bukan tujuan akhir."
-    </p>
-  </div>
-</section>       
+  <!-- Bagian Motivasi -->
+  <section class="w-full py-4 px-2 rounded-2xl mt-4">
+    <h2 class="text-center mb-2">KATA MOTIVASI</h2>
+    <div class="space-y-2 text-center">
+      <p>"Orang yang sukses sangat menyukai prosesnya,<br> bukan hasil instan."</p>
+      <p>"Kegigihan berakar dalam mimpi,<br> maka kita juga tidak pernah menyerah."</p>
+      <p>"Kesuksesan adalah sebuah perjalanan,<br> bukan tujuan akhir."</p>
+    </div>
+  </section>
 
-    // Hitung mundur 24 jam
+  <script>
     let countDownDate = new Date().getTime() + (24 * 60 * 60 * 1000);
-
     let x = setInterval(function() {
       let now = new Date().getTime();
       let distance = countDownDate - now;
@@ -172,7 +172,7 @@
     }, 1000);
   </script>
 </body>
-</html>>
+</html>
 
 <!-- CSS animasi kombinasi pulse + wiggle -->
 <style>
