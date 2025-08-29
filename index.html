@@ -131,80 +131,24 @@
       <span class="red-old-price">Rp.350.000</span></p>
   </div>
 
-  <!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kata Motivasi</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        body {
-            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-            color: #333;
-            padding: 20px;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .motivation-container {
-            max-width: 600px;
-            width: 100%;
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            padding: 30px;
-        }
-        .motivation-section {
-            text-align: center;
-        }
-        .motivation-section h2 {
-            color: #e74c3c;
-            font-size: 28px;
-            margin-bottom: 40px; /* Spasi 2x setelah judul */
-        }
-        .quote {
-            font-size: 20px;
-            line-height: 1.6;
-            color: #34495e;
-            margin-bottom: 30px;
-            font-style: italic;
-        }
-        .quote-line {
-            display: block;
-        }
-    </style>
-</head>
-<body>
-    <div class="motivation-container">
-        <!-- Bagian Motivasi -->
-        <section class="motivation-section">
-            <h2>KATA MOTIVASI</h2>
-            <div class="quote">
-                <span class="quote-line">"Orang yang sukses sangat menyukai prosesnya,</span>
-                <span class="quote-line">bukan hasil instan."</span>
-            </div>
-            <div class="quote">
-                <span class="quote-line">"Kegigihan berakar dalam mimpi,</span>
-                <span class="quote-line">maka kita juga tidak pernah menyerah."</span>
-            </div>
-            <div class="quote">
-                <span class="quote-line">"Kesuksesan adalah sebuah perjalanan,</span>
-                <span class="quote-line">bukan tujuan akhir."</span>
-            </div>
-        </section>
-    </div>
-</body>
-</html>
+ <!-- Bagian KATA MOTIVASI -->
+<section class="w-full bg-white py-6 px-4 rounded-2xl shadow-lg mt-6">
+  <h2 class="text-center text-2xl font-extrabold text-black mb-4">
+    KATA MOTIVASI
+  </h2>
+  <div class="space-y-3 text-center">
+    <p class="text-sm text-black font-light">
+      "Orang yang sukses sangat menyukai prosesnya, bukan hasil instan."
+    </p>
+    <p class="text-sm text-black font-light">
+      "Kegigihan berakar dalam mimpi, maka kita juga tidak pernah menyerah."
+    </p>
+    <p class="text-sm text-black font-light">
+      "Kesuksesan adalah sebuah perjalanan, bukan tujuan akhir."
+    </p>
+  </div>
+</section>       
 
-  <script>
     // Hitung mundur 24 jam
     let countDownDate = new Date().getTime() + (24 * 60 * 60 * 1000);
 
