@@ -165,10 +165,11 @@
     }, 1000);
   </script>
 </body>
-</html>
-<!-- CSS animasi nudge -->
+</html>>
+
+<!-- CSS animasi kombinasi pulse + wiggle -->
 <style>
-  .btn-nudge {
+  .btn-combo {
     display: inline-block;
     background: #0088cc;
     color: white;
@@ -177,19 +178,23 @@
     font-size: 13px;
     text-decoration: none;
     font-weight: bold;
-    animation: nudge 3s infinite; /* setiap 3 detik */
+    animation: combo 3s infinite; /* animasi tiap 3 detik */
     transform-origin: center;
   }
 
-  @keyframes nudge {
-    0%, 92%, 100% { transform: rotate(0deg); }
-    94% { transform: rotate(-5deg) scale(1.05); }
-    96% { transform: rotate(5deg) scale(1.05); }
-    98% { transform: rotate(-3deg); }
+  @keyframes combo {
+    0%, 90%, 100% { transform: scale(1) rotate(0deg); }
+    92% { transform: scale(1.1); }       /* pulse */
+    94% { transform: scale(1.05); }
+    95% { transform: rotate(-4deg) scale(1.05); } /* goyang kiri */
+    96% { transform: rotate(4deg) scale(1.05); }  /* goyang kanan */
+    97% { transform: rotate(-2deg) scale(1.05); }
+    98% { transform: rotate(2deg) scale(1.05); }
+    99% { transform: rotate(0deg) scale(1); }
   }
 
-  /* biar animasi berhenti kalau di-hover */
-  .btn-nudge:hover {
+  /* pause animasi saat hover */
+  .btn-combo:hover {
     animation-play-state: paused;
   }
 </style>
@@ -202,7 +207,7 @@
   <p style="font-size: 12px; color: white; margin-bottom: 10px;">
     Lihat testimoni nyata dari member kami di Telegram 🚀
   </p>
-  <a href="https://t.me/TESTIMONI_ZHII_BUSINESSS" target="_blank" class="btn-nudge">
+  <a href="https://t.me/TESTIMONI_ZHII_BUSINESSS" target="_blank" class="btn-combo">
     Lihat Testimoni di Telegram
   </a>
 </div>
