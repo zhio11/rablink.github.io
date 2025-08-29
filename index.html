@@ -166,6 +166,33 @@
   </script>
 </body>
 </html>
+<!-- CSS animasi nudge -->
+<style>
+  .btn-nudge {
+    display: inline-block;
+    background: #0088cc;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: bold;
+    animation: nudge 5s infinite; /* setiap 5 detik */
+    transform-origin: center;
+  }
+
+  @keyframes nudge {
+    0%, 92%, 100% { transform: rotate(0deg); }
+    94% { transform: rotate(-5deg) scale(1.05); }
+    96% { transform: rotate(5deg) scale(1.05); }
+    98% { transform: rotate(-3deg); }
+  }
+
+  /* biar animasi berhenti kalau di-hover */
+  .btn-nudge:hover {
+    animation-play-state: paused;
+  }
+</style>
 
 <!-- Testimoni Section -->
 <div style="background: linear-gradient(135deg, #1a1a1a, #333); border-radius: 12px; padding: 12px; margin: 12px auto; max-width: 320px; text-align: center; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
@@ -175,8 +202,7 @@
   <p style="font-size: 12px; color: white; margin-bottom: 10px;">
     Lihat testimoni nyata dari member kami di Telegram 🚀
   </p>
-  <a href="https://t.me/TESTIMONI_ZHII_BUSINESSS" target="_blank" 
-     style="display: inline-block; background: #0088cc; color: white; padding: 6px 14px; border-radius: 8px; font-size: 13px; text-decoration: none; font-weight: bold;">
+  <a href="https://t.me/TESTIMONI_ZHII_BUSINESSS" target="_blank" class="btn-nudge">
     Lihat Testimoni di Telegram
   </a>
 </div>
