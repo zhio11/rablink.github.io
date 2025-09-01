@@ -147,7 +147,64 @@
     <p>"Kegigihan berakar dalam mimpi,<br> maka kita juga tidak pernah menyerah."</p>  
     <p>"Kesuksesan adalah sebuah perjalanan,<br> bukan tujuan akhir."</p>  
   </section>  
-  
+  <script>
+  // Set waktu 24 jam dari sekarang
+  let countDownDate = new Date().getTime() + (24 * 60 * 60 * 1000);
+
+  let x = setInterval(function() {
+    let now = new Date().getTime();
+    let distance = countDownDate - now;
+
+    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("countdown").innerHTML =
+      days + " hari " +
+      hours + " jam " +
+      (minutes < 10 ? "0" + minutes : minutes) + " menit " +
+      (seconds < 10 ? "0" + seconds : seconds) + " detik";
+
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("countdown").innerHTML = "Promo telah berakhir";
+    }
+  }, 1000);
+</script>
+
+<style>
+  .countdown-title {
+    font-size: 15px;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #000;
+  }
+
+  .countdown-box {
+    background: #fff;
+    padding: 20px; /* lebih besar */
+    display: inline-block;
+    border-radius: 10px;
+    margin-top: 6px;
+    font-size: 22px; /* font lebih besar */
+    font-weight: bold;
+    color: #e60000;
+    box-shadow: 0 3px 7px rgba(0,0,0,0.15);
+  }
+
+  .red-old-price {
+    text-decoration: line-through;
+    color: red;
+    font-size: 13px;
+  }
+
+  .highlight-text {
+    color: #fff;
+    margin-top: 8px;
+    font-size: 14px;
+  }
+</style>
   <script>  
     let countDownDate = new Date().getTime() + (24 * 60 * 60 * 1000);  
     let x = setInterval(function() {  
