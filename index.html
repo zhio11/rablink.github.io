@@ -147,7 +147,7 @@
     <p>"Kegigihan berakar dalam mimpi,<br> maka kita juga tidak pernah menyerah."</p>  
     <p>"Kesuksesan adalah sebuah perjalanan,<br> bukan tujuan akhir."</p>  
   </section>  
-  <script>
+<script>
   // Set waktu 24 jam dari sekarang
   let countDownDate = new Date().getTime() + (24 * 60 * 60 * 1000);
 
@@ -160,11 +160,11 @@
     let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+    // format dengan <br> supaya detik tetap di bawah menit
     document.getElementById("countdown").innerHTML =
-      days + " hari " +
-      hours + " jam " +
+      days + " hari " + hours + " jam<br>" +
       (minutes < 10 ? "0" + minutes : minutes) + " menit " +
-      (seconds < 10 ? "0" + seconds : seconds) + " detik";
+      (seconds < 10 ? "0" + seconds : seconds) + "<br>detik";
 
     if (distance < 0) {
       clearInterval(x);
@@ -183,14 +183,16 @@
 
   .countdown-box {
     background: #fff;
-    padding: 20px; /* lebih besar */
+    padding: 20px;
     display: inline-block;
     border-radius: 10px;
     margin-top: 6px;
-    font-size: 22px; /* font lebih besar */
+    font-size: 22px;
     font-weight: bold;
     color: #e60000;
     box-shadow: 0 3px 7px rgba(0,0,0,0.15);
+    text-align: center;
+    line-height: 1.6;
   }
 
   .red-old-price {
@@ -205,6 +207,7 @@
     font-size: 14px;
   }
 </style>
+
   <script>  
     let countDownDate = new Date().getTime() + (24 * 60 * 60 * 1000);  
     let x = setInterval(function() {  
