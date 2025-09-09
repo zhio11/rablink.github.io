@@ -399,134 +399,126 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Cara Join</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZHII BUSINESS</title>
   <style>
-    /* ---------- layout umum ---------- */
-    :root{
-      --bg1: #6a11cb;
-      --bg2: #2575fc;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      min-height:100vh;
-      font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(135deg, var(--bg1), var(--bg2));
-      color:#fff;
-      display:flex;
-      align-items:flex-start;
-      justify-content:center;
-      padding:28px 16px;
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
     }
 
-    /* ---------- judul ---------- */
-    .wrap{
-      width:100%;
-      max-width:420px;
-    }
-    h2{
-      text-align:center;
-      margin:6px 0 18px;
-      font-size:26px;
-      font-weight:700;
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
     }
 
-    /* ---------- daftar langkah (column) ---------- */
-    .steps{
-      display:flex;
-      flex-direction:column;
-      gap:12px;
-      align-items:center;
+    /* ===== Alasan Join ===== */
+    .alasan-join {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin: 20px;
     }
 
-    /* kotak langkah (lebih kecil) */
-    .step{
-      width:86%;
-      max-width:220px;       /* kecil */
-      background:#000;       /* kotak hitam */
-      color:#fff;            /* tulisan putih */
-      border-radius:12px;
-      padding:10px 12px;     /* kecil */
+    .alasan-join .card {
+      background: #fff;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+
+    /* ===== Cara Join ===== */
+    .cara-join {
+      margin: 30px auto;
+      text-align: center;
+    }
+
+    .cara-join h2 {
+      font-size: 24px;
+      margin-bottom: 16px;
+      color: #fff;
+    }
+
+    .steps {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .step {
+      width: 200px;
+      background: #000;
+      color: #fff;
+      border-radius: 12px;
+      padding: 10px;
       box-shadow: 0 6px 14px rgba(0,0,0,0.35);
-      display:flex;
-      flex-direction:column;
-      align-items:center;    /* gambar & teks center */
-      justify-content:center;
-      text-align:center;
-      margin:0 auto;
-      line-height:1.1;
+      text-align: center;
     }
 
-    .step img{
-      width:48px;            /* ikon agak kecil */
-      height:48px;
-      object-fit:cover;
-      margin-bottom:8px;
-      border-radius:8px;     /* sedikit rounded supaya rapi */
-      background:#fff;       /* jika ikon transparan biar kontras */
-      padding:4px;
+    .step img {
+      width: 48px;
+      height: 48px;
+      object-fit: cover;
+      margin-bottom: 6px;
+      border-radius: 8px;
+      background: #fff;
+      padding: 4px;
     }
 
-    .step p{
-      margin:0;
-      font-size:13px;        /* teks kecil */
-      font-weight:700;
-      color:#fff;
-      word-wrap:break-word;
-    }
-
-    /* responsive */
-    @media (min-width:680px){
-      .steps{ gap:14px }
-      .step{ max-width:260px; padding:12px 14px }
-      .step img{ width:56px; height:56px; margin-bottom:10px }
-      .step p{ font-size:14px }
+    .step p {
+      margin: 0;
+      font-size: 13px;
+      font-weight: 600;
     }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <h2>Cara Join</h2>
 
+  <!-- ===== Alasan Join ===== -->
+  <section class="alasan-join">
+    <h2 style="color:#fff;">Alasan Join</h2>
+    <div class="card">Full Bimbingan</div>
+    <div class="card">Waktu Fleksibel</div>
+    <div class="card">Aman & Halal</div>
+    <div class="card">Tidak Ada Target</div>
+    <div class="card">Tidak Bagi Hasil</div>
+    <div class="card">No MLM</div>
+  </section>
+
+  <!-- ===== Cara Join ===== -->
+  <section class="cara-join">
+    <h2>Cara Join</h2>
     <div class="steps">
-      <!-- 1 -->
       <div class="step">
         <img src="https://i.postimg.cc/ppfPyJwy/906175.png" alt="WhatsApp">
-        <p>Chat admin melalui DM/WhatsApp</p>
+        <p>Chat admin melalui WhatsApp</p>
       </div>
-
-      <!-- 2 FIX JOIN -->
       <div class="step">
         <img src="https://i.postimg.cc/4HTNF2Ck/IMG-20250902-202320.jpg" alt="Fix Join">
         <p>Ketik "FIX JOIN" lalu kirim ke admin</p>
       </div>
-
-      <!-- 3 pembayaran -->
       <div class="step">
         <img src="https://i.postimg.cc/pmWhXZHX/pngtree-payment-confirmation-icon-vector-logo-png-image-12462169.png" alt="Pembayaran">
         <p>Lakukan pembayaran</p>
       </div>
-
-      <!-- 4 formulir -->
       <div class="step">
         <img src="https://i.postimg.cc/KRSZZHsd/pen-filling-application-form-apply-600nw-2246161303.jpg" alt="Formulir">
         <p>Mengisi form member baru</p>
       </div>
-
-      <!-- 5 class bimbingan -->
       <div class="step">
-        <img src="https://i.postimg.cc/sM3sWZzm/HP-1732361448.webp" alt="Class Bimbingan">
+        <img src="https://i.postimg.cc/sM3sWZzm/HP-1732361448.webp" alt="Class">
         <p>Mengikuti class bimbingan</p>
       </div>
-
-      <!-- 6 akhir -->
       <div class="step">
         <img src="https://i.postimg.cc/sM3sWZzm/HP-1732361448.webp" alt="Akhir">
         <p>Masuk semua fasilitas grup</p>
       </div>
     </div>
-  </div>
+  </section>
+
 </body>
-</html>
+  </html>
