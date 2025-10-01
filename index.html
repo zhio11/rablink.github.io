@@ -1,440 +1,118 @@
-<!DOCTYPE html>  
-<html lang="id">  
-<head>  
-  <meta charset="UTF-8">  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-  <title>ZHII BUSINESS</title>  
-  <style>  
-    body {  
-      font-family: Arial, sans-serif;  
-      background: linear-gradient(135deg, #6a11cb, #2575fc);  
-      text-align: center;  
-      margin: 0;  
-      padding: 0;  
-      color: #333;  
-    }  
-    .container {  
-      max-width: 600px;  
-      margin: 15px auto;  
-      padding: 10px;  
-    }  
-    h1 {  
-      color: #fff;  
-      font-size: 22px;  
-      margin-bottom: 8px;  
-    }  
-    .members {  
-      font-size: 13px;  
-      margin-bottom: 15px;  
-      color: #f1f1f1;  
-    }  
-    h2 {  
-      font-size: 16px;  
-    }  
-    .box {  
-      background: white;  
-      padding: 4px; /* super kecil */  
-      margin: 6px auto; /* kecil */  
-      border-radius: 6px; /* kecil */  
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);  
-      font-size: 11px; /* isi kotak kecil */  
-      max-width: 320px; /* biar ga penuh layar */  
-    }  
-    .box p {  
-      margin: 4px 0;  
-    }  
-    .promo-join {  
-      font-size: 13px;  
-      font-weight: bold;  
-      margin-bottom: 4px;  
-    }  
-    .price {  
-      font-size: 14px;  
-      color: red;  
-      font-weight: bold;  
-    }  
-    .old-price {  
-      text-decoration: line-through;  
-      color: gray;  
-      font-size: 12px;  
-    }  
-    .discount {  
-      margin-top: 4px;  
-      font-size: 11px;  
-      color: #444;  
-    }  
-    .countdown-title {  
-      font-size: 13px;  
-      margin-top: 10px;  
-      font-weight: bold;  
-      color: #000;  
-    }  
-    .countdown-box {  
-      background: #fff;  
-      padding: 6px;  
-      display: inline-block;  
-      border-radius: 6px;  
-      margin-top: 4px;  
-      font-size: 16px;  
-      font-weight: bold;  
-      color: #e60000;  
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);  
-    }  
-    .red-old-price {  
-      text-decoration: line-through;  
-      color: red;  
-      font-size: 12px;  
-    }  
-    /* Bagian Motivasi */  
-    section {  
-      margin-top: 20px; /* dinaikkan ke atas */  
-      text-align: center;  
-      color: white;  
-    }  
-    section h2 {  
-      font-size: 18px;  
-      margin-bottom: 10px;  
-    }  
-    section p {  
-      font-size: 16px; /* dibesarkan */  
-      margin: 8px 0;  
-    }  
-    /* khusus teks penghasilan */  
-    .income-text {  
-      font-size: 13px; /* agak dibesarin dikit */  
-    }  
-    .highlight-text {  
-      color: white; /* buat "jangan sampai kelewatan..." jadi putih */  
-    }  
-  </style>  
-</head>  
-<body>  
-  <div class="container">  
-    <!-- Logo di atas judul -->
-    <img src="https://drive.google.com/uc?export=view&id=1-5T2y_sOzalBJ6gSNh2g0nOzAQsiPSZe" 
-         alt="Logo ZHII Business" class="logo">  
-
-    <h1 class="main-title">WELCOME TO ZHII BUSINESS</h1>  
-    <p class="members">👥 sudah 94.330 member bergabung!</p>  
-
-    <h2 class="subtitle">JOIN DAN RAIH KEUNTUNGAN</h2>  
-
-    <!-- Kotak 1 -->  
-    <div class="box">  
-      <p style="font-weight: 700; font-size: 20px; text-align: center;">
-  LOWONGAN PEKERJAAN:
-      </p><br>
-      <p class="income-text">  
-        Mau income 100RB-2JT sehari kak?? Bisa banget BISNIS INI SANGAT COCOK   
-        UNTUK PELAJAR, MAHASISWA, IRT, PENGANGGURAN, KERJA SAMPINGAN, cocok untuk semua kalangan ⚠️<br><br>  
-        <strong>BIG PROMO HANYA UTK 10 ORANG PERTAMA ⚠️</strong><br>  
-        Penghasilan minimal 100rb-500rb /hari!!! kamu mau kan biar ATM gendut😊 YUK JOIN🥰 <br><br>  
-        ❌NO MLM ❌NO JUDI ❌NO MONEY GAMES, 100% halal  
-      </p>  
-    </div>  
-  </div>  
-
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZHII BUSINESS</title>
   <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      margin: 0;
+      padding: 0;
+      color: #333;
+      text-align: center;
+    }
+    .container {
+      max-width: 600px;
+      margin: 15px auto;
+      padding: 10px;
+    }
+    h1 {
+      color: #fff;
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+    .members {
+      font-size: 13px;
+      margin-bottom: 15px;
+      color: #f1f1f1;
+    }
+    h2 {
+      font-size: 16px;
+    }
+    .box {
+      background: #fff;
+      padding: 4px;
+      margin: 6px auto;
+      border-radius: 6px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      font-size: 11px;
+      max-width: 320px;
+    }
+    .box p { margin: 4px 0; }
+    .promo-join { font-size: 13px; font-weight: bold; margin-bottom: 4px; }
+    .price { font-size: 14px; color: red; font-weight: bold; }
+    .old-price { text-decoration: line-through; color: gray; font-size: 12px; }
+    .discount { margin-top: 4px; font-size: 11px; color: #444; }
+    .countdown-title { font-size: 13px; margin-top: 10px; font-weight: bold; color: #000; }
+    .countdown-box {
+      background: #fff;
+      padding: 6px;
+      display: inline-block;
+      border-radius: 6px;
+      margin-top: 4px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #e60000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .red-old-price { text-decoration: line-through; color: red; font-size: 12px; }
+    section { margin-top: 20px; text-align: center; color: white; }
+    section h2 { font-size: 18px; margin-bottom: 10px; }
+    section p { font-size: 16px; margin: 8px 0; }
+    .income-text { font-size: 13px; }
+    .highlight-text { color: white; }
     .logo {
       display: block;
-      margin: 0 auto 20px auto; /* posisi tengah + jarak bawah */
-      width: 180px; /* ukuran logo */
+      margin: 0 auto 20px auto;
+      width: 180px;
       height: auto;
     }
-
     .main-title {
-      font-size: 48px;   
+      font-size: 48px;
       font-weight: bold;
       color: white;
       margin-bottom: 10px;
       text-align: center;
     }
-
-    .members {
-      font-size: 26px;   
+    .members { font-size: 26px; color: white; margin-bottom: 40px; }
+    .subtitle { font-size: 28px; color: white; margin-bottom: 20px; }
+    .box { background: #fff; padding: 15px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+    .income-text { font-size: 18px; line-height: 1.6; }
+    /* Animasi tombol */
+    .btn-combo {
+      display: inline-block;
+      background: #0088cc;
       color: white;
-      text-align: center;
-      margin-bottom: 40px; 
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      text-decoration: none;
+      font-weight: bold;
+      animation: combo 5s infinite;
+      transform-origin: center;
     }
-
-    .subtitle {
-      font-size: 28px;
-      color: white;
-      text-align: center;
-      margin-bottom: 20px;
+    @keyframes combo {
+      0%, 90%, 100% { transform: scale(1) rotate(0deg); }
+      92% { transform: scale(1.1); }
+      94% { transform: scale(1.05); }
+      95% { transform: rotate(-4deg) scale(1.05); }
+      96% { transform: rotate(4deg) scale(1.05); }
+      97% { transform: rotate(-2deg) scale(1.05); }
+      98% { transform: rotate(2deg) scale(1.05); }
+      99% { transform: rotate(0deg) scale(1); }
     }
-
-    .box {
-      background: #fff;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-
-    .income-text {
-      font-size: 18px;
-      line-height: 1.6;
-    }
-  </style>
-</body>  
-    <!-- Kotak 2 -->  
-    <div class="box">  
-      <p class="promo-join">PROMO JOIN HARI INI🔥</p>  
-      <p class="price">Rp.60.000 <span class="old-price">Rp.350.000</span></p>  
-      <p class="discount">💥 diskon 85% untuk 10 orang pertama</p>  
-    </div>  
-  
-    <!-- Countdown -->
-<p class="countdown-title">🔥PROMO SPESIAL BERAKHIR DALAM:</p>
-<div class="countdown-box" id="countdown">0 hari 24 jam 00 menit <br> 24 detik</div>
-<p class="highlight-text">Jangan sampai kelewatan! harga akan kembali normal ke <span class="red-old-price">Rp.350.000</span></p>
-
-  
-  <!-- Bagian Motivasi -->  
-  <section>  
-    <h2>KATA MOTIVASI</h2>  
-    <p>"Orang yang sukses sangat menyukai prosesnya,<br> bukan hasil instan."</p>  
-    <p>"Kegigihan berakar dalam mimpi,<br> maka kita juga tidak pernah menyerah."</p>  
-    <p>"Kesuksesan adalah sebuah perjalanan,<br> bukan tujuan akhir."</p>  
-  </section>  
-<script>
-  // Set waktu 24 jam dari sekarang
-  let countDownDate = new Date().getTime() + (24 * 60 * 60 * 1000);
-
-  let x = setInterval(function() {
-    let now = new Date().getTime();
-    let distance = countDownDate - now;
-
-    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    // format dengan <br> supaya detik tetap di bawah menit
-    document.getElementById("countdown").innerHTML =
-      days + " hari " + hours + " jam<br>" +
-      (minutes < 10 ? "0" + minutes : minutes) + " menit " +
-      (seconds < 10 ? "0" + seconds : seconds) + "<br>detik";
-
-    if (distance < 0) {
-      clearInterval(x);
-      document.getElementById("countdown").innerHTML = "Promo telah berakhir";
-    }
-  }, 1000);
-</script>
-
-<style>
-  .countdown-title {
-    font-size: 15px;
-    margin-top: 15px;
-    font-weight: bold;
-    color: #000;
-  }
-
-  .countdown-box {
-    background: #fff;
-    padding: 20px;
-    display: inline-block;
-    border-radius: 10px;
-    margin-top: 6px;
-    font-size: 22px;
-    font-weight: bold;
-    color: #e60000;
-    box-shadow: 0 3px 7px rgba(0,0,0,0.15);
-    text-align: center;
-    line-height: 1.6;
-  }
-
-  .red-old-price {
-    text-decoration: line-through;
-    color: red;
-    font-size: 13px;
-  }
-
-  .highlight-text {
-    color: #fff;
-    margin-top: 8px;
-    font-size: 14px;
-  }
-</style>
-
-  <script>  
-    let countDownDate = new Date().getTime() + (24 * 60 * 60 * 1000);  
-    let x = setInterval(function() {  
-      let now = new Date().getTime();  
-      let distance = countDownDate - now;  
-  
-      let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));  
-      let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));  
-      let seconds = Math.floor((distance % (1000 * 60)) / 1000);  
-  
-      document.getElementById("countdown").innerHTML =  
-        (hours < 10 ? "0" + hours : hours) + ":" +  
-        (minutes < 10 ? "0" + minutes : minutes) + ":" +  
-        (seconds < 10 ? "0" + seconds : seconds);  
-  
-      if (distance < 0) {  
-        clearInterval(x);  
-        document.getElementById("countdown").innerHTML = "EXPIRED";  
-      }  
-    }, 1000);  
-  </script>  
-</body>  
-</html>
-<!-- CSS animasi kombinasi pulse + wiggle -->
-<style>
-  .btn-combo {
-    display: inline-block;
-    background: #0088cc;
-    color: white;
-    padding: 6px 14px;
-    border-radius: 8px;
-    font-size: 13px;
-    text-decoration: none;
-    font-weight: bold;
-    animation: combo 5s infinite; /* animasi tiap 5 detik */
-    transform-origin: center;
-  }
-
-  @keyframes combo {
-    0%, 90%, 100% { transform: scale(1) rotate(0deg); }
-    92% { transform: scale(1.1); }       /* pulse */
-    94% { transform: scale(1.05); }
-    95% { transform: rotate(-4deg) scale(1.05); } /* goyang kiri */
-    96% { transform: rotate(4deg) scale(1.05); }  /* goyang kanan */
-    97% { transform: rotate(-2deg) scale(1.05); }
-    98% { transform: rotate(2deg) scale(1.05); }
-    99% { transform: rotate(0deg) scale(1); }
-  }
-
-  /* pause animasi saat hover */
-  .btn-combo:hover {
-    animation-play-state: paused;
-  }
-</style>
-
-<!-- Testimoni Section -->
-<div style="background: linear-gradient(135deg, #1a1a1a, #333); border-radius: 12px; padding: 12px; margin: 12px auto; max-width: 320px; text-align: center; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
-  <h2 style="font-size: 16px; font-weight: bold; color: white; margin-bottom: 8px;">
-    Testimoni
-  </h2>
-  <p style="font-size: 12px; color: white; margin-bottom: 10px;">
-    Lihat testimoni nyata dari member kami di Telegram 🚀
-  </p>
-  <a href="https://t.me/TESTIMONI_ZHII_BUSINESSS" target="_blank" class="btn-combo">
-    Lihat Testimoni di Telegram
-  </a>
-</div> 
-
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alasan Join</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #6a11cb, #2575fc); /* ungu ke biru */
-      color: #333;
-    }
-
-    .container {
-      max-width: 500px;
-      margin: auto;
-      padding: 20px;
-    }
-
-    h1 {
-      text-align: center;
-      color: #fff;
-      margin-bottom: 20px;
-    }
-
-    .card {
-      background: #fff;
-      border-radius: 12px;
-      padding: 15px;
-      margin-bottom: 15px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-
-    .card b {
-      color: #111;
-    }
-  </style>
-</head>
-<body>
-
-  <div class="container">
-    <h1>Alasan Join</h1>
-
-    <div class="card">
-      <b>Full Bimbingan:</b> Bimbingan langsung sampai sukses.
-    </div>
-
-    <div class="card">
-      <b>Waktu Fleksibel:</b> Bisa sambil kuliah, kerja, atau ibu rumah tangga.
-    </div>
-
-    <div class="card">
-      <b>Aman & Halal:</b> 100% aman dan halal, tidak ada tipu-tipu.
-    </div>
-
-    <div class="card">
-      <b>Tidak Ada Target:</b> Tidak ada tekanan atau target penjualan.
-    </div>
-
-    <div class="card">
-      <b>Tidak Bagi Hasil:</b> Penghasilan 100% milik member.
-    </div>
-
-    <div class="card">
-      <b>No MLM:</b> Bukan sistem MLM, semua murni usaha.
-    </div>
-  </div>
-
-</body>
-</html>
-
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CARA JOINN</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(135deg, #6a11cb, #2575fc);
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-
-    /* ===== Cara Join ===== */
-    .cara-join {
-      margin: 30px auto;
-      text-align: center;
-    }
-
-    .cara-join h2 {
-      font-size: 24px;
-      margin-bottom: 16px;
-      color: #fff;
-    }
-
+    .btn-combo:hover { animation-play-state: paused; }
+    /* Cara Join */
+    .cara-join { margin: 30px auto; text-align: center; }
+    .cara-join h2 { font-size: 24px; margin-bottom: 16px; color: #fff; }
     .steps {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 12px;
     }
-
     .step {
       width: 200px;
       background: #000;
@@ -444,7 +122,6 @@
       box-shadow: 0 6px 14px rgba(0,0,0,0.35);
       text-align: center;
     }
-
     .step img {
       width: 48px;
       height: 48px;
@@ -454,79 +131,8 @@
       background: #fff;
       padding: 4px;
     }
-
-    .step p {
-      margin: 0;
-      font-size: 13px;
-      font-weight: 600;
-    }
-  </style>
-</head>
-<body>
-
-  <!-- ===== Cara Join ===== -->
-  <section class="cara-join">
-    <h2>Cara Join</h2>
-    <div class="steps">
-      <div class="step">
-        <img src="https://i.postimg.cc/BXLjkCq6/8d56c9fa12b68219df979fff4c71e3ea-icon.png" alt="ikon" width="150">
-        <p>Chat admin melalui WhatsApp</p>
-      </div>
-      <div class="step">
-        <img src="https://i.postimg.cc/cv0F7ptB/IMG-20250912-222034.jpg" alt="ikon" width="150">
-        <p>Ketik "FIX JOIN" lalu kirim ke admin</p>
-      </div>
-      <div class="step">
-      <img src="https://zhio11.github.io/rablink.github.io/pngtree-payment-confirmation-icon-vector-logo-png-image_12462169.png" alt="ikon pembayaran" width="150">
-        <p>Lakukan pembayaran</p>
-      </div>
-      <div class="step">
-        <img src="https://zhio11.github.io/rablink.github.io/pen-filling-application-form-apply-600nw-2246161303.jpg" alt="ikon form" width="150">
-        <p>Mengisi form member baru</p>
-      </div>
-      <div class="step">
-        <img src="https://zhio11.github.io/rablink.github.io/906175.png" alt="ikon" width="150">
-        <p>Mengikuti class bimbingan</p>
-      </div>
-      <div class="step">
-        <img src="https://zhio11.github.io/rablink.github.io/HP-1732361448.png" alt="ikon" width="150">
-        <p>Masuk semua fasilitas grup</p>
-      </div>
-    </div>
-  </section>
-
-</body>
-  </html>
-
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Promo</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #6a11cb, #2575fc);
-      color: #fff;
-      text-align: center;
-      padding: 30px 15px;
-    }
-    h1 {
-      font-weight: 900;
-      font-size: 28px;
-      margin-bottom: 10px;
-    }
-    p {
-      font-size: 16px;
-      line-height: 1.5;
-      margin-bottom: 25px;
-    }
-    h2 {
-      font-weight: 900;
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
+    .step p { margin: 0; font-size: 13px; font-weight: 600; }
+    /* Promo bagian akhir */
     .btn {
       display: inline-block;
       background: #4CAF50;
@@ -538,11 +144,7 @@
       transition: 0.3s;
       animation: shake 1.2s infinite;
     }
-    .btn:hover {
-      background: #45a049;
-    }
-
-    /* Animasi goyang */
+    .btn:hover { background: #45a049; }
     @keyframes shake {
       0% { transform: translate(0, 0); }
       20% { transform: translate(-3px, 0); }
@@ -555,23 +157,103 @@
 </head>
 <body>
 
-  <h1>💡 Siap Ubah Hidupmu?</h1>
-  <p>
-    Kesempatan tidak datang dua kali. Sekarang waktu terbaik untuk memulai 
-    perjalananmu menuju penghasilan tambahan dan kebebasan finansial.  
-    Jangan tunda!
-  </p>
+  <div class="container">
+    <img src="https://drive.google.com/uc?export=view&id=1-5T2y_sOzalBJ6gSNh2g0nOzAQsiPSZe" alt="Logo ZHII Business" class="logo">
+    <h1 class="main-title">WELCOME TO ZHII BUSINESS</h1>
+    <p class="members">👥 sudah 94.330 member bergabung!</p>
+    <h2 class="subtitle">JOIN DAN RAIH KEUNTUNGAN</h2>
 
-  <h2>Cek Surat Legalitas</h2>
-  <p>
-    Untuk memastikan legalitas usaha dan surat resmi kami, silakan cek melalui link berikut:
-  </p>
+    <!-- Lowongan -->
+    <div class="box">
+      <p style="font-weight: 700; font-size: 20px; text-align: center;">LOWONGAN PEKERJAAN:</p><br>
+      <p class="income-text">
+        Mau income 100RB-2JT sehari kak?? Bisa banget BISNIS INI SANGAT COCOK
+        UNTUK PELAJAR, MAHASISWA, IRT, PENGANGGURAN, KERJA SAMPINGAN, cocok untuk semua kalangan ⚠️<br><br>
+        <strong>BIG PROMO HANYA UTK 10 ORANG PERTAMA ⚠️</strong><br>
+        Penghasilan minimal 100rb-500rb /hari!!! kamu mau kan biar ATM gendut😊 YUK JOIN🥰 <br><br>
+        ❌NO MLM ❌NO JUDI ❌NO MONEY GAMES, 100% halal
+      </p>
+    </div>
 
-  <a href="https://docs.google.com/document/d/1P-9LXxF2QNFGvqD9_aUi6izz4EjTG1JEOoY2VucoHcE/edit?usp=drivesdk" 
-     target="_blank" 
-     class="btn">
-    SURAT LEGALITAS
-  </a>
+    <!-- Promo -->
+    <div class="box">
+      <p class="promo-join">PROMO JOIN HARI INI🔥</p>
+      <p class="price">Rp.60.000 <span class="old-price">Rp.350.000</span></p>
+      <p class="discount">💥 diskon 85% untuk 10 orang pertama</p>
+    </div>
+
+    <!-- Countdown -->
+    <p class="countdown-title">🔥PROMO SPESIAL BERAKHIR DALAM:</p>
+    <div class="countdown-box" id="countdown">0 hari 24 jam 00 menit <br> 24 detik</div>
+    <p class="highlight-text">Jangan sampai kelewatan! harga akan kembali normal ke <span class="red-old-price">Rp.350.000</span></p>
+
+    <!-- Motivasi -->
+    <section>
+      <h2>KATA MOTIVASI</h2>
+      <p>"Orang yang sukses sangat menyukai prosesnya,<br> bukan hasil instan."</p>
+      <p>"Kegigihan berakar dalam mimpi,<br> maka kita juga tidak pernah menyerah."</p>
+      <p>"Kesuksesan adalah sebuah perjalanan,<br> bukan tujuan akhir."</p>
+    </section>
+
+    <!-- Testimoni -->
+    <div style="background: linear-gradient(135deg, #1a1a1a, #333); border-radius: 12px; padding: 12px; margin: 12px auto; max-width: 320px; text-align: center; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+      <h2 style="font-size: 16px; font-weight: bold; color: white; margin-bottom: 8px;">Testimoni</h2>
+      <p style="font-size: 12px; color: white; margin-bottom: 10px;">Lihat testimoni nyata dari member kami di Telegram 🚀</p>
+      <a href="https://t.me/TESTIMONI_ZHII_BUSINESSS" target="_blank" class="btn-combo">Lihat Testimoni di Telegram</a>
+    </div>
+
+    <!-- Alasan Join -->
+    <div class="container">
+      <h1>Alasan Join</h1>
+      <div class="card"><b>Full Bimbingan:</b> Bimbingan langsung sampai sukses.</div>
+      <div class="card"><b>Waktu Fleksibel:</b> Bisa sambil kuliah, kerja, atau ibu rumah tangga.</div>
+      <div class="card"><b>Aman & Halal:</b> 100% aman dan halal, tidak ada tipu-tipu.</div>
+      <div class="card"><b>Tidak Ada Target:</b> Tidak ada tekanan atau target penjualan.</div>
+      <div class="card"><b>Tidak Bagi Hasil:</b> Penghasilan 100% milik member.</div>
+      <div class="card"><b>No MLM:</b> Bukan sistem MLM, semua murni usaha.</div>
+    </div>
+
+    <!-- Cara Join -->
+    <section class="cara-join">
+      <h2>Cara Join</h2>
+      <div class="steps">
+        <div class="step"><img src="https://i.postimg.cc/BXLjkCq6/8d56c9fa12b68219df979fff4c71e3ea-icon.png" alt="ikon"><p>Chat admin melalui WhatsApp</p></div>
+        <div class="step"><img src="https://i.postimg.cc/cv0F7ptB/IMG-20250912-222034.jpg" alt="ikon"><p>Ketik "FIX JOIN" lalu kirim ke admin</p></div>
+        <div class="step"><img src="https://zhio11.github.io/rablink.github.io/pngtree-payment-confirmation-icon-vector-logo-png-image_12462169.png" alt="ikon"><p>Lakukan pembayaran</p></div>
+        <div class="step"><img src="https://zhio11.github.io/rablink.github.io/pen-filling-application-form-apply-600nw-2246161303.jpg" alt="ikon"><p>Mengisi form member baru</p></div>
+        <div class="step"><img src="https://zhio11.github.io/rablink.github.io/906175.png" alt="ikon"><p>Mengikuti class bimbingan</p></div>
+        <div class="step"><img src="https://zhio11.github.io/rablink.github.io/HP-1732361448.png" alt="ikon"><p>Masuk semua fasilitas grup</p></div>
+      </div>
+    </section>
+
+    <!-- Promo Akhir -->
+    <h1>💡 Siap Ubah Hidupmu?</h1>
+    <p>Kesempatan tidak datang dua kali. Sekarang waktu terbaik untuk memulai perjalananmu menuju penghasilan tambahan dan kebebasan finansial. Jangan tunda!</p>
+    <h2>Cek Surat Legalitas</h2>
+    <p>Untuk memastikan legalitas usaha dan surat resmi kami, silakan cek melalui link berikut:</p>
+    <a href="https://docs.google.com/document/d/1P-9LXxF2QNFGvqD9_aUi6izz4EjTG1JEOoY2VucoHcE/edit?usp=drivesdk" target="_blank" class="btn">SURAT LEGALITAS</a>
+  </div>
+
+  <!-- Countdown Script -->
+  <script>
+    let countDownDate = new Date().getTime() + (24 * 60 * 60 * 1000);
+    let x = setInterval(function() {
+      let now = new Date().getTime();
+      let distance = countDownDate - now;
+      let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      document.getElementById("countdown").innerHTML =
+        days + " hari " + hours + " jam<br>" +
+        (minutes < 10 ? "0" + minutes : minutes) + " menit " +
+        (seconds < 10 ? "0" + seconds : seconds) + "<br>detik";
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "Promo telah berakhir";
+      }
+    }, 1000);
+  </script>
 
 </body>
 </html>
