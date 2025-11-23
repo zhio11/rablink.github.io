@@ -12,21 +12,21 @@ body {
   color: #333;
   text-align: center;
 
-  /* GRADIENT UNGU DOMINAN */
-  background:
-    linear-gradient(135deg, #6a11cb 0%, #8a2be2 100%),
-    url("https://raw.githubusercontent.com/zhio11/rablink.github.io/08e7821a98b976855d42f58d340a94a8907cfabe/Logo%20Bisnis%20Makanan%20Roti%20Bakar%20Lingkaran%20Cokelat_20250410_223734_0000.png");
+  /* GRADIENT + LOGO (LOGO DI ATAS) */
+  background-image:
+    url("https://raw.githubusercontent.com/zhio11/rablink.github.io/08e7821a98b976855d42f58d340a94a8907cfabe/Logo%20Bisnis%20Makanan%20Roti%20Bakar%20Lingkaran%20Cokelat_20250410_223734_0000.png"),
+    linear-gradient(135deg, #6a11cb 0%, #8a2be2 100%);
 
-  /* SETIAP BACKGROUND PUNYA SIZE SENDIRI */
-  background-size: cover, 380px;
+  /* UKURAN: LOGO 380px, GRADIENT FULL */
+  background-size: 380px, cover;
 
-  /* POSISI GRADIENT & POSISI LOGO */
-  background-position: center, center top 40px;
+  /* POSISI: LOGO DI ATAS, GRADIENT DI TENGAH */
+  background-position: center top 40px, center;
 
-  /* AGAR KEDUA BACKGROUND TIDAK DIULANG */
+  /* ULANGAN */
   background-repeat: no-repeat, no-repeat;
 
-  /* BLUR DIMATIKAN */
+  /* MATIKAN BLUR */
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
 }
