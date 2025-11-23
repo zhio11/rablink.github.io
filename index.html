@@ -7,11 +7,21 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #6a11cb, #2575fc);
       margin: 0;
       padding: 0;
       color: #333;
       text-align: center;
+
+      /* === BACKGROUND LOGO FIXED + EFEK KACA === */
+      background: url("https://drive.google.com/uc?export=view&id=1-5T2y_sOzalBJ6gSNh2g0nOzAQsiPSZe");
+      background-size: 380px;
+      background-repeat: no-repeat;
+      background-position: center top 40px;
+      background-attachment: fixed;
+
+      /* Efek kaca transparan */
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
     }
     .container {
       max-width: 600px;
@@ -48,15 +58,15 @@
     .countdown-title { font-size: 13px; margin-top: 10px; font-weight: bold; color: #000; }
     .countdown-box {
       background: #fff;
-      padding: 15px;          /* diperbesar */
+      padding: 15px;
       display: inline-block;
       border-radius: 10px;
       margin-top: 6px;
-      font-size: 20px;        /* diperbesar */
+      font-size: 20px;
       font-weight: bold;
       color: #e60000;
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-      min-width: 200px;       /* biar lebih lebar */
+      min-width: 200px;
     }
     .red-old-price { text-decoration: line-through; color: red; font-size: 12px; }
     section { margin-top: 20px; text-align: center; color: white; }
@@ -82,7 +92,6 @@
     .box { background: #fff; padding: 15px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
     .income-text { font-size: 18px; line-height: 1.6; }
 
-    /* Card untuk alasan join */
     .card {
       background: #fff;
       color: #000;
@@ -95,7 +104,6 @@
       text-align: left;
     }
 
-    /* Animasi tombol */
     .btn-combo {
       display: inline-block;
       background: #0088cc;
@@ -120,7 +128,6 @@
     }
     .btn-combo:hover { animation-play-state: paused; }
 
-    /* Cara Join */
     .cara-join { margin: 30px auto; text-align: center; }
     .cara-join h2 { font-size: 24px; margin-bottom: 16px; color: #fff; }
     .steps {
@@ -130,7 +137,7 @@
       gap: 14px;
     }
     .step {
-      width: 240px;               /* diperbesar */
+      width: 240px;
       background: #000;
       color: #fff;
       border-radius: 14px;
@@ -149,7 +156,6 @@
     }
     .step p { margin: 0; font-size: 14px; font-weight: 600; }
 
-    /* Promo bagian akhir */
     .btn {
       display: inline-block;
       background: #4CAF50;
@@ -180,7 +186,6 @@
     <p class="members">👥 sudah 94.330 member bergabung!</p>
     <h2 class="subtitle">JOIN DAN RAIH KEUNTUNGAN</h2>
 
-    <!-- Lowongan -->
     <div class="box">
       <p style="font-weight: 700; font-size: 20px; text-align: center;">LOWONGAN PEKERJAAN:</p><br>
       <p class="income-text">
@@ -192,19 +197,16 @@
       </p>
     </div> <br><br>
 
-    <!-- Promo -->
     <div class="box">
       <p class="promo-join">PROMO JOIN HARI INI🔥</p>
       <p class="price">Rp.60.000 <span class="old-price">Rp.350.000</span></p>
       <p class="discount">💥 diskon 85% untuk 10 orang pertama</p>
     </div> <br>
 
-    <!-- Countdown -->
     <p class="countdown-title">🔥PROMO SPESIAL BERAKHIR DALAM:</p>
     <div class="countdown-box" id="countdown">0 hari 24 jam 00 menit <br> 24 detik</div>
     <p class="highlight-text">Jangan sampai kelewatan! harga akan kembali normal ke <span class="red-old-price">Rp.350.000</span></p> <br>
 
-    <!-- Motivasi -->
     <section>
       <h2>KATA MOTIVASI</h2>
       <p>"Orang yang sukses sangat menyukai prosesnya,<br> bukan hasil instan."</p>
@@ -212,14 +214,12 @@
       <p>"Kesuksesan adalah sebuah perjalanan,<br> bukan tujuan akhir."</p> <br>
     </section>
 
-    <!-- Testimoni -->
     <div style="background: linear-gradient(135deg, #1a1a1a, #333); border-radius: 12px; padding: 12px; margin: 12px auto; max-width: 320px; text-align: center; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
       <h2 style="font-size: 16px; font-weight: bold; color: white; margin-bottom: 8px;">Testimoni</h2>
       <p style="font-size: 12px; color: white; margin-bottom: 10px;">Lihat testimoni nyata dari member kami di Telegram 🚀</p>
       <a href="https://t.me/TESTIMONI_ZHII_BUSINESSS" target="_blank" class="btn-combo">Lihat Testimoni di Telegram</a> <br><br>
     </div>
 
-    <!-- Alasan Join -->
     <div class="container">
       <h1>Alasan Join</h1>
       <div class="card"><b>Full Bimbingan:</b> Bimbingan langsung sampai sukses.</div>
@@ -230,7 +230,6 @@
       <div class="card"><b>No MLM:</b> Bukan sistem MLM, semua murni usaha.</div> <br>
     </div>
 
-    <!-- Cara Join -->
     <section class="cara-join">
       <h2>Cara Join</h2>
       <div class="steps">
@@ -243,7 +242,6 @@
       </div> <br>
     </section>
 
-    <!-- Promo Akhir -->
     <h1>💡 Siap Ubah Hidupmu?</h1>
     <p>Kesempatan tidak datang dua kali. Sekarang waktu terbaik untuk memulai perjalananmu menuju penghasilan tambahan dan kebebasan finansial. Jangan tunda!</p> <br>
     <h2>Cek Surat Legalitas</h2>
@@ -251,7 +249,6 @@
     <a href="https://docs.google.com/document/d/1P-9LXxF2QNFGvqD9_aUi6izz4EjTG1JEOoY2VucoHcE/edit?usp=drivesdk" target="_blank" class="btn">SURAT LEGALITAS</a>
   </div>
 
-  <!-- Countdown Script -->
   <script>
     let countDownDate = new Date().getTime() + (24 * 60 * 60 * 1000);
     let x = setInterval(function() {
@@ -273,4 +270,4 @@
   </script>
 
 </body>
-        </html>
+</html>
