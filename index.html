@@ -357,19 +357,38 @@
 </div>
 
 <script>
-  const questions = document.querySelectorAll('.faq-question');
+const questions = document.querySelectorAll('.faq-question');
 
-  questions.forEach(q => {
-      q.addEventListener('click', () => {
-          const answer = q.nextElementSibling;
+questions.forEach(q => {
+    q.addEventListener('click', () => {
+        const answer = q.nextElementSibling;
 
-          // Tutup semua jawaban lain
-          document.querySelectorAll('.faq-answer').forEach(a => {
-              if (a !== answer) a.style.display = "none";
-          });
+        // Tutup semua jawaban lain dengan animasi gradual
+        document.querySelectorAll('.faq-answer').forEach(a => {
+            if (a !== answer) {
+                a.style.height = "0px";        // turunkan tinggi
+                setTimeout(() => {
+                    a.style.display = "none";   // sembunyikan setelah animasi
+                }, 300);                         // durasi animasi 0.3 detik
+            }
+        });
 
-          // Toggle yang diklik
-          answer.style.display = answer.style.display === "block" ? "none" : "block";
-      });
-  });
+        // Toggle jawaban yang diklik
+        if (answer.style.display === "block") {
+            answer.style.height = "0px";
+            setTimeout(() => answer.style.display = "none", 300);
+        } else {
+            answer.style.display = "block";
+            answer.style.height = "0px";       // mulai dari tinggi 0
+            setTimeout(() => answer.style.height = answer.scrollHeight + "px", 10); // slide open
+        }
+    });
+});
 </script>
+
+<style>
+.faq-answer {
+    overflow: hidden;
+    transition: height 0.3s ease; /* animasi gradual */
+}
+</style>
