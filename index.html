@@ -12,21 +12,29 @@
   color: #333;
   text-align: center;
 
-  /* WARNA DASAR HALAMAN (ANTI PUTIH) */
+  /* WARNA BACKGROUND UNGU DOMINAN */
   background-color: #5c18a8;
 
   /* GRADIENT UNGU */
-  background:
-    linear-gradient(135deg, #5c18a8 0%, #7a1ecf 100%);
-
-  /* LOGO FIX DI TENGAH */
   background-image:
+    linear-gradient(135deg, #5c18a8, #7a1ecf),
     url("https://raw.githubusercontent.com/zhio11/rablink.github.io/08e7821a98b976855d42f58d340a94a8907cfabe/Logo%20Bisnis%20Makanan%20Roti%20Bakar%20Lingkaran%20Cokelat_20250410_223734_0000.png");
 
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 420px;
-  background-attachment: fixed;
+  background-size:
+    cover,         /* gradient */
+    420px;         /* ukuran logo */
+
+  background-repeat:
+    no-repeat,
+    no-repeat;
+
+  background-position:
+    center top,
+    center center;
+
+  background-attachment:
+    scroll,
+    fixed;
    }
     .container {
       max-width: 600px;
