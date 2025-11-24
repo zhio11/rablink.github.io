@@ -5,33 +5,26 @@
   <meta-name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ZHII BUSINESS</title>
   <style>
-    /* === BODY (LOGO DI BELAKANG + WARNA UNGU DOMINAN) === */
-body {
+   body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   color: #333;
   text-align: center;
 
-  background-image:
-    url("https://raw.githubusercontent.com/zhio11/rablink.github.io/08e7821a98b976855d42f58d340a94a8907cfabe/Logo%20Bisnis%20Makanan%20Roti%20Bakar%20Lingkaran%20Cokelat_20250410_223734_0000.png"),
+  /* BACKGROUND WARNA DOMINAN UNGU */
+  background:
     linear-gradient(135deg, #5c18a8 0%, #7a1ecf 100%);
 
-  background-size: 380px, cover;
-  background-position: center top 40px, center;
-  background-repeat: no-repeat, no-repeat;
-  background-attachment: fixed;
-}
+  /* LOGO DI TENGAH & TIDAK BERGERAK */
+  background-image:
+    url("https://raw.githubusercontent.com/zhio11/rablink.github.io/08e7821a98b976855d42f58d340a94a8907cfabe/Logo%20Bisnis%20Makanan%20Roti%20Bakar%20Lingkaran%20Cokelat_20250410_223734_0000.png");
 
-
-/* === TEKS MENGAMBANG TANPA BLUR (GLASS EFFECT TANPA BLUR) === */
-.glass {
-  background: rgba(255, 255, 255, 0.10); /* bening, no blur */
-  padding: 20px;
-  border-radius: 20px;
-  margin: 20px auto;
-  max-width: 900px;
-}
+  background-repeat: no-repeat;
+  background-position: center center;   /* TENGAH LAYAR */
+  background-size: 420px;               /* BESAR-BESAR */
+  background-attachment: fixed;         /* LOGO DIAM (GA IKUT SCROLL) */
+   } 
     .container {
       max-width: 600px;
       margin: 15px auto;
