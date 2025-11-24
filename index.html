@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ZHII BUSINESS</title>
   <style>
+/* BACKGROUND: GRADIENT + LOGO */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -12,25 +13,29 @@ body {
   color: #333;
   text-align: center;
 
-  /* GRADIENT + LOGO (LOGO DI ATAS) */
   background-image:
     url("https://raw.githubusercontent.com/zhio11/rablink.github.io/08e7821a98b976855d42f58d340a94a8907cfabe/Logo%20Bisnis%20Makanan%20Roti%20Bakar%20Lingkaran%20Cokelat_20250410_223734_0000.png"),
     linear-gradient(135deg, #6a11cb 0%, #8a2be2 100%);
 
-  /* UKURAN: LOGO 380px, GRADIENT FULL */
   background-size: 380px, cover;
-
-  /* POSISI: LOGO DI ATAS, GRADIENT DI TENGAH */
   background-position: center top 40px, center;
-
-  /* ULANGAN */
   background-repeat: no-repeat, no-repeat;
-
-  /* MATIKAN BLUR */
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
 }
-      margin: 0;
+
+
+/* ❗ INI BAGIAN PENTING: EFek KACA TRANSPARAN UNTUK TEKS */
+.glass {
+  margin-top: 350px;          /* Supaya teksnya mulai di bawah logo */
+  padding: 20px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.1);   /* Transparan bening */
+  border-radius: 12px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+    }
+      margin
       padding: 0;
       color: #333;
       text-align: center;
