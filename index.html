@@ -2,27 +2,17 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta-name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ZHII BUSINESS</title>
   <style>
-    <body style="background: linear-gradient(135deg, #6a11cb, #8c3ffc); margin:0; padding:0;">
-
-  <!-- LOGO FIXED DI TENGAH & TIDAK IKUT SCROLL -->
-  <img src="https://drive.google.com/uc?export=view&id=1-5T2y_sOzalBJ6gSNh2g0nOzAQsiPSZe"
-       style="
-         position: fixed;
-         top: 50%;
-         left: 50%;
-         transform: translate(-50%, -50%);
-         width: 350px;
-         opacity: 0.18;
-         pointer-events: none;
-         z-index: 1;
-       ">
-
-  <!-- SEMUA ISI WEBSITE (TIDAK DIUBAH SAMA SEKALI) -->
-  <div class="container" style="position: relative; z-index: 2;">
-    <!-- semua kode kamu yang lain biarkan apa adanya -->
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      margin: 0;
+      padding: 0;
+      color: #333;
+      text-align: center;
+    }
     .container {
       max-width: 600px;
       margin: 15px auto;
@@ -38,7 +28,9 @@
       margin-bottom: 15px;
       color: #f1f1f1;
     }
-    h2 { font-size: 16px; }
+    h2 {
+      font-size: 16px;
+    }
     .box {
       background: #fff;
       padding: 4px;
@@ -56,15 +48,15 @@
     .countdown-title { font-size: 13px; margin-top: 10px; font-weight: bold; color: #000; }
     .countdown-box {
       background: #fff;
-      padding: 15px;
+      padding: 15px;          /* diperbesar */
       display: inline-block;
       border-radius: 10px;
       margin-top: 6px;
-      font-size: 20px;
+      font-size: 20px;        /* diperbesar */
       font-weight: bold;
       color: #e60000;
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-      min-width: 200px;
+      min-width: 200px;       /* biar lebih lebar */
     }
     .red-old-price { text-decoration: line-through; color: red; font-size: 12px; }
     section { margin-top: 20px; text-align: center; color: white; }
@@ -90,6 +82,7 @@
     .box { background: #fff; padding: 15px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
     .income-text { font-size: 18px; line-height: 1.6; }
 
+    /* Card untuk alasan join */
     .card {
       background: #fff;
       color: #000;
@@ -102,6 +95,7 @@
       text-align: left;
     }
 
+    /* Animasi tombol */
     .btn-combo {
       display: inline-block;
       background: #0088cc;
@@ -126,6 +120,7 @@
     }
     .btn-combo:hover { animation-play-state: paused; }
 
+    /* Cara Join */
     .cara-join { margin: 30px auto; text-align: center; }
     .cara-join h2 { font-size: 24px; margin-bottom: 16px; color: #fff; }
     .steps {
@@ -135,7 +130,7 @@
       gap: 14px;
     }
     .step {
-      width: 240px;
+      width: 240px;               /* diperbesar */
       background: #000;
       color: #fff;
       border-radius: 14px;
@@ -154,6 +149,7 @@
     }
     .step p { margin: 0; font-size: 14px; font-weight: 600; }
 
+    /* Promo bagian akhir */
     .btn {
       display: inline-block;
       background: #4CAF50;
@@ -177,9 +173,6 @@
   </style>
 </head>
 <body>
-
-<!-- ✨ SEMUA TEKS DI DALAM EFEK KACA -->
-<div class="glass">
 
   <div class="container">
     <img src="https://drive.google.com/uc?export=view&id=1-5T2y_sOzalBJ6gSNh2g0nOzAQsiPSZe" alt="Logo ZHII Business" class="logo">
@@ -258,28 +251,26 @@
     <a href="https://docs.google.com/document/d/1P-9LXxF2QNFGvqD9_aUi6izz4EjTG1JEOoY2VucoHcE/edit?usp=drivesdk" target="_blank" class="btn">SURAT LEGALITAS</a>
   </div>
 
-</div> <!-- END DIV KACA -->
-
-<!-- Countdown Script -->
-<script>
-  let countDownDate = new Date().getTime() + (24 * 60 * 60 * 1000);
-  let x = setInterval(function() {
-    let now = new Date().getTime();
-    let distance = countDownDate - now;
-    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    document.getElementById("countdown").innerHTML =
-      days + " hari " + hours + " jam<br>" +
-      (minutes < 10 ? "0" + minutes : minutes) + " menit " +
-      (seconds < 10 ? "0" + seconds : seconds) + " detik";
-    if (distance < 0) {
-      clearInterval(x);
-      document.getElementById("countdown").innerHTML = "Promo telah berakhir";
-    }
-  }, 1000);
-</script>
+  <!-- Countdown Script -->
+  <script>
+    let countDownDate = new Date().getTime() + (24 * 60 * 60 * 1000);
+    let x = setInterval(function() {
+      let now = new Date().getTime();
+      let distance = countDownDate - now;
+      let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      document.getElementById("countdown").innerHTML =
+        days + " hari " + hours + " jam<br>" +
+        (minutes < 10 ? "0" + minutes : minutes) + " menit " +
+        (seconds < 10 ? "0" + seconds : seconds) + " detik";
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "Promo telah berakhir";
+      }
+    }, 1000);
+  </script>
 
 </body>
- </html>
+        </html>
