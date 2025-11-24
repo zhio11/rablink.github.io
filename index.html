@@ -274,3 +274,102 @@
 
 </body>
         </html>
+
+<style>
+  .faq-container {
+      width: 100%;
+      margin: 0 auto;
+      padding: 10px;
+  }
+
+  .faq-item {
+      background: transparent;
+      border: 2px solid #fff;
+      border-radius: 10px;
+      margin-bottom: 12px;
+      overflow: hidden;
+      backdrop-filter: blur(3px);
+  }
+
+  .faq-question {
+      padding: 15px;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+      background: rgba(0,0,0,0.2);
+  }
+
+  .faq-answer {
+      padding: 15px;
+      display: none;
+      background: rgba(255,255,255,0.9);
+      color: #000;
+      font-size: 15px;
+  }
+</style>
+
+<h2 style="font-weight: 900; font-size: 25px; margin-bottom: 15px;">FAQ- Pertanyaan yang sering diajukan</h2>
+
+<div class="faq-container">
+
+  <!-- A -->
+  <div class="faq-item">
+      <div class="faq-question">1. Apakah bisnis ini aman dan legal?</div>
+      <div class="faq-answer">
+          Ya, bisnis ini memiliki legalitas yang bisa kamu cek langsung melalui surat resmi kami.
+      </div>
+  </div>
+
+  <!-- B -->
+  <div class="faq-item">
+      <div class="faq-question">2. Berapa biaya untuk join?</div>
+      <div class="faq-answer">
+          Harga normal 350k, tapi saat ini sedang promo hanya <b>60K SAJA!</b> hemat <b>85%!</b>
+      </div>
+  </div>
+
+  <!-- C -->
+  <div class="faq-item">
+      <div class="faq-question">3. Apakah ada target penjualan?</div>
+      <div class="faq-answer">
+          Tidak, tidak ada target, semua di jalankan dengan fleksibel tanpa tekanan
+      </div>
+  </div>
+
+  <!-- D -->
+  <div class="faq-item">
+      <div class="faq-question">4. Apakah ini termasuk MLM atau money game?</div>
+      <div class="faq-answer">
+          Tidak, ini bukan MLM, money game, ataupun judi. <br>
+          Bisnis ini 100% halal dan berbasis produk/jasa nyata.
+      </div>
+  </div>
+
+  <!-- E -->
+  <div class="faq-item">
+      <div class="faq-question">5. Bagaimana jika saya pemula?</div>
+      <div class="faq-answer">
+          Tenang, kamu akan mendapatkan <b>FULL BIMBINGAN</b> sampai bisa! <br>
+          Mulai dari nol pun bisa sukses
+      </div>
+  </div>
+
+</div>
+
+<script>
+  const questions = document.querySelectorAll('.faq-question');
+
+  questions.forEach(q => {
+      q.addEventListener('click', () => {
+          const answer = q.nextElementSibling;
+
+          // Tutup semua jawaban lain
+          document.querySelectorAll('.faq-answer').forEach(a => {
+              if (a !== answer) a.style.display = "none";
+          });
+
+          // Toggle yang diklik
+          answer.style.display = answer.style.display === "block" ? "none" : "block";
+      });
+  });
+</script>
